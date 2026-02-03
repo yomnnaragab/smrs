@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - Current Operating Types</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Roca Two';
+            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
+            font-weight: 900; 
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Roca Two', serif;
+            color: #231f20;
+            background-color: #ffc061;
+        }
+
+        .font-roca-bold {
+            font-weight: 1000;
+        }
+
+        /* Larger Hexagon Shape */
+        .hexagon-shape {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            aspect-ratio: 1 / 0.85;
+            padding: 2rem;
+            background-color: #abe26a;
+            position: relative;
+        }
+
+        /* Connected Yellow Borders */
+        .hex-wrapper {
+            filter: drop-shadow(0px 0px 0px #f4eb29) 
+                    drop-shadow(5px 5px 0px #f4eb29) 
+                    drop-shadow(-5px -5px 0px #f4eb29) 
+                    drop-shadow(5px -5px 0px #f4eb29) 
+                    drop-shadow(-5px 5px 0px #f4eb29);
+            width: 220px; /* Increased size */
+            margin: -5px; /* Negative margin to connect edges */
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .hex-wrapper:hover {
+            transform: scale(1.15);
+            z-index: 50;
+            filter: drop-shadow(0px 0px 15px #f4eb29);
+        }
+
+        .hive-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .hex-row { 
+            display: flex; 
+            justify-content: center; 
+            width: 100%;
+        }
+
+        /* Tiling Logic to Lock Edges */
+        .row-2 {
+            margin-top: -55px; /* Pulls middle row up to lock with top */
+            margin-bottom: -55px; /* Pulls bottom row up to lock with middle */
+        }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
+
+    <div class="w-full max-w-7xl flex justify-start mb-10">
+        <a href="index.html" class="btn-hover bg-[#ffe373] border-[8px] border-[#abe26a] rounded-full py-2 px-8 text-lg font-roca-bold text-[#231f20] uppercase shadow-sm">
+            ← Back Home
+        </a>
+    </div>
+
+    <div class="bg-[#ffe373] border-[10px] border-[#abe26a] rounded-[3rem] p-12 md:p-16 shadow-xl flex flex-col items-center w-full max-w-5xl">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-6xl font-roca-bold uppercase">Current Operating SMRs</h2>
+            
+        </div>
+
+        <div class="hive-container">
+            <div class="hex-row">
+                <div class="hex-wrapper">
+                    <a href="type_water.html" class="hexagon-shape text-base md:text-lg font-roca-bold uppercase leading-tight">
+                        Water-Cooled SMRs
+                    </a>
+                </div>
+            </div>
+
+            <div class="hex-row row-2">
+                <div class="hex-wrapper">
+                    <a href="type_htgr.html" class="hexagon-shape text-base md:text-lg font-roca-bold uppercase leading-tight">
+                        High-Temp Gas-Cooled
+                    </a>
+                </div>
+                <div class="hex-wrapper">
+                    <a href="type_fast.html" class="hexagon-shape text-base md:text-lg font-roca-bold uppercase leading-tight">
+                        Fast Neutron SMRs
+                    </a>
+                </div>
+            </div>
+
+            <div class="hex-row">
+                <div class="hex-wrapper">
+                    <a href="type_salt.html" class="hexagon-shape text-base md:text-lg font-roca-bold uppercase leading-tight">
+                        Molten Salt SMRs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-12 opacity-80 text-center">
+        <p class="font-roca-bold uppercase tracking-[0.3em] text-sm">Nuclear and Radiation Engineering Department • Alexandria University</p>
+    </div>
+
+</body>
+</html>

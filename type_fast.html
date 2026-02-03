@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - Liquid Metal-Cooled Status</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Roca Two';
+            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
+            font-weight: 900; 
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Roca Two', serif;
+            color: #231f20;
+            background-color: #ffc061;
+        }
+
+        .font-roca-bold {
+            font-weight: 1000;
+        }
+
+        .content-card {
+            background-color: #ffe373;
+            border: 10px solid #abe26a;
+            border-radius: 3rem;
+        }
+
+        /* Rounded Table Aesthetic */
+        .rounded-table-container {
+            border: 2px solid #abe26a;
+            border-radius: 2rem;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        th {
+            background-color: #abe26a;
+            padding: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 2px solid #abe26a;
+        }
+
+        td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(171, 226, 106, 0.4);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) td {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-hover:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
+
+    <div class="w-full max-w-6xl flex justify-start mb-8">
+        <a href="operating_smrs.html" class="btn-hover bg-[#ffe373] border-[8px] border-[#abe26a] rounded-full py-2 px-8 text-lg font-roca-bold text-[#231f20] uppercase shadow-sm transition-all">
+            ← Back to Types
+        </a>
+    </div>
+
+    <div class="w-full max-w-6xl content-card p-8 md:p-12 shadow-xl">
+        <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-4 text-center">
+            Liquid Metal-Cooled Fast SMRs
+        </h2>
+        <p class="text-center font-roca-bold opacity-70 uppercase tracking-widest mb-10">Current Global Status & Development</p>
+
+        <div class="rounded-table-container overflow-x-auto">
+            <table>
+                <thead>
+                    <tr class="text-sm md:text-base">
+                        <th>Design</th>
+                        <th>Output (MWe)</th>
+                        <th>Type</th>
+                        <th>Developer</th>
+                        <th>Country</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody class="text-xs md:text-sm font-roca-bold">
+                    <tr><td>ARC-100</td><td>100</td><td>Sodium-cooled</td><td>ARC Nuclear Canada, Inc.</td><td>Canada</td><td>Conceptual design</td></tr>
+                    <tr><td>Blue Capsule</td><td>50</td><td>Sodium-cooled</td><td>Blue Capsule Technology</td><td>France</td><td>Conceptual design</td></tr>
+                    <tr><td>BREST-OD-300</td><td>300</td><td>Lead-cooled</td><td>NIKIET</td><td>Russian Federation</td><td>Under construction</td></tr>
+                    <tr><td>HEXANA</td><td>150</td><td>Sodium-cooled</td><td>Hexana</td><td>France</td><td>Conceptual design</td></tr>
+                    <tr><td>LFR-AS-200</td><td>200</td><td>Lead-cooled</td><td>NewCleo</td><td>Italy/France</td><td>Conceptual design</td></tr>
+                    <tr><td>OTRERA 300</td><td>110</td><td>Sodium-cooled</td><td>Otrera Energy</td><td>France</td><td>Conceptual design</td></tr>
+                    <tr><td>SEALER-55</td><td>55</td><td>Lead-cooled</td><td>Blykalla</td><td>Sweden</td><td>Conceptual design</td></tr>
+                    <tr><td>SVBR-100</td><td>100</td><td>Lead-Bismuth</td><td>JSC AKME Engineering</td><td>Russian Federation</td><td>Detailed design</td></tr>
+                    <tr><td>Natrium</td><td>345</td><td>Sodium-cooled</td><td>TerraPower</td><td>USA</td><td>Conceptual design</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mt-12 opacity-80 text-center">
+        <p class="font-roca-bold uppercase tracking-[0.3em] text-sm">Nuclear and Radiation Engineering Department • Alexandria University</p>
+    </div>
+
+</body>
+</html>

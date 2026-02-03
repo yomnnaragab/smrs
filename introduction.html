@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - Introduction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Roca Two';
+            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
+            font-weight: 900; 
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Roca Two', serif;
+            color: #231f20;
+            background-color: #ffc061;
+        }
+
+        .font-roca-bold {
+            font-weight: 1000;
+        }
+
+        .btn-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .btn-hover:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.05);
+        }
+
+        /* Horizontal Hive Layout with Slight Overlap */
+        .hive-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        /* Increased Hexagon Size & Shape */
+        .hexagon-shape {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            aspect-ratio: 1 / 0.85;
+            padding: 2.5rem; /* Increased padding for larger size */
+            background-color: #abe26a;
+            position: relative;
+        }
+
+        .hex-wrapper {
+            filter: drop-shadow(0px 0px 0px #f4eb29) 
+                    drop-shadow(5px 5px 0px #f4eb29) 
+                    drop-shadow(-5px -5px 0px #f4eb29) 
+                    drop-shadow(5px -5px 0px #f4eb29) 
+                    drop-shadow(-5px 5px 0px #f4eb29);
+            width: 260px; /* Increased from 210px */
+            margin: 0 -15px; /* Adjusted overlap for larger width */
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .hex-wrapper:hover {
+            transform: scale(1.1);
+            z-index: 50;
+            filter: drop-shadow(0px 0px 20px #f4eb29);
+        }
+
+        /* Increased Title Font Size */
+        .hex-title {
+            font-size: 1.8rem; /* Increased from 1.3rem */
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .hex-text {
+            font-size: 0.85rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-8 md:p-12 flex flex-col items-center">
+
+    <div class="w-full max-w-5xl flex justify-start mb-12">
+        <a href="index.html" class="btn-hover bg-[#ffe373] border-[8px] border-[#abe26a] rounded-full py-2 px-8 text-lg font-roca-bold text-[#231f20] uppercase shadow-sm">
+            ← Back Home
+        </a>
+    </div>
+
+    <div class="w-full max-w-5xl bg-[#ffe373] border-[10px] border-[#abe26a] rounded-[3rem] p-8 md:p-12 shadow-xl text-center">
+        <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 inline-block">
+            Introduction
+        </h2>
+
+        <div class="space-y-6 text-lg md:text-xl leading-relaxed mx-auto">
+            <p>
+                The accelerating global demand for clean, secure, and reliable energy has renewed focus on nuclear power as a vital component of the low-carbon transition. With a growing population and industrial development, the world's electricity demand continues to rise.
+            </p>
+
+            <p>
+                Renewable energy sources, while essential, remain intermittent and cannot alone provide stable baseload power. Consequently, nuclear energy is increasingly recognized as indispensable to achieving international climate goals.
+            </p>
+
+            <p>
+                Conventional large-scale nuclear power plants face persistent challenges, including high capital costs, complex supply chains, and extended construction timelines. These limitations have motivated a global shift toward Small Modular Reactors (SMRs) as a promising solution.
+            </p>
+
+            <div class="pt-10">
+                <div class="hive-container">
+                    <div class="hex-wrapper">
+                        <div class="hexagon-shape">
+                            <span class="hex-title font-roca-bold">Small</span>
+                            <p class="hex-text">Typically generates less than 300 MWe for remote grids.</p>
+                        </div>
+                    </div>
+                    <div class="hex-wrapper">
+                        <div class="hexagon-shape">
+                            <span class="hex-title font-roca-bold">Modular</span>
+                            <p class="hex-text">Factory-fabricated and transportable components.</p>
+                        </div>
+                    </div>
+                    <div class="hex-wrapper">
+                        <div class="hexagon-shape">
+                            <span class="hex-title font-roca-bold">Reactor</span>
+                            <p class="hex-text">Fission-based power with innovative safety.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-12 opacity-80 text-center">
+        <p class="font-roca-bold uppercase tracking-[0.3em] text-sm">Nuclear and Radiation Engineering Department • Alexandria University</p>
+    </div>
+
+</body>
+</html>
