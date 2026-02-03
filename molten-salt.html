@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - Molten Salt SMRs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Roca Two';
+            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
+            font-weight: 900; 
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Roca Two', serif;
+            color: #231f20;
+            background-color: #ffc061;
+            scroll-behavior: smooth;
+        }
+
+        .font-roca-bold {
+            font-weight: 1000;
+        }
+
+        .glass-card {
+            background: rgba(255, 227, 115, 0.7);
+            backdrop-filter: blur(10px);
+            border-left: 12px solid #abe26a;
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+            box-shadow: 10px 10px 0px rgba(35, 31, 32, 0.05);
+            height: 100%;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            color: #231f20;
+            display: inline-block;
+            border-bottom: 4px solid #231f20;
+            padding-bottom: 0.5rem;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.1);
+            filter: brightness(1.1);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-12">
+
+    <div class="fixed top-6 left-6 z-50">
+        <a href="types.html" class="nav-btn bg-[#ffe373] border-[6px] border-[#abe26a] rounded-full py-2 px-6 font-roca-bold text-[#231f20] uppercase shadow-lg block">
+            ← Types
+        </a>
+    </div>
+
+    <header class="w-full max-w-7xl mx-auto text-center mt-20 mb-20">
+        <h1 class="text-6xl md:text-8xl font-roca-bold uppercase tracking-tighter leading-none">
+            Molten Salt SMRs
+        </h1>
+        
+    </header>
+
+    <main class="w-full max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            
+            <section class="glass-card">
+                <h2 class="section-title font-roca-bold">Coolant & Moderator</h2>
+                <p class="text-lg leading-relaxed">
+                    MSRs use molten halide salts as primary coolant, operating at high temperatures (600–900°C) while maintaining near-atmospheric pressure. This eliminates high-pressure accident risks. These salts are chemically stable and provide strong negative temperature feedback. Designs may use graphite moderators or operate in fast neutron spectra.
+                </p>
+            </section>
+
+            <section class="glass-card">
+                <h2 class="section-title font-roca-bold">Fuel & Core Design</h2>
+                <p class="text-lg leading-relaxed">
+                    Fuel can be liquid (dissolved in salt) or solid (TRISO particles). Liquid-fueled designs allow for online refueling and continuous removal of gaseous fission products, suppressing xenon poisoning. Heat is transferred via three loops: a radioactive primary salt loop, a clean intermediate salt loop, and a tertiary power conversion loop.
+                </p>
+            </section>
+
+            <section class="glass-card">
+                <h2 class="section-title font-roca-bold">Safety Features</h2>
+                <div class="text-lg leading-relaxed">
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li><strong>Freeze Plug:</strong> A salt section that melts during overheating, draining fuel by gravity into subcritical tanks.</li>
+                        <li><strong>Low Pressure:</strong> Operates at atmospheric pressure, reducing structural mechanical stress.</li>
+                        <li><strong>Passive Cooling:</strong> Decay heat is removed via natural convection and radiation.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="glass-card">
+                <h2 class="section-title font-roca-bold">Operation & Transients</h2>
+                <p class="text-lg leading-relaxed">
+                    MSRs exhibit self-regulating behavior due to strong negative reactivity coefficients. Continuous stripping of gases like Xenon and Krypton maintains stable reactivity. However, salt chemistry requires precise control to manage corrosion and prevent salt freezing in compact configurations.
+                </p>
+            </section>
+
+        </div>
+
+        <section class="glass-card mb-20">
+            <h2 class="section-title font-roca-bold">Technical Analysis</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                
+                <div class="p-6 rounded-2xl border-l-8 border-green-500">
+                    <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-800">Advantages</h3>
+                    <ul class="list-disc ml-5 space-y-2 text-lg">
+                        <li><strong>High Efficiency:</strong> Can exceed 50% thermal efficiency.</li>
+                        <li><strong>Non-Flammable:</strong> No risk of hydrogen explosions or sodium fires.</li>
+                        <li><strong>Resource Utilization:</strong> Can recycle actinides and use thorium/uranium fertile loads.</li>
+                        <li><strong>Excellent Load Following:</strong> Quickly adjusts to grid demand variations.</li>
+                        <li><strong>Compact/Modular:</strong> Core volume is used efficiently for decentralized power.</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-2xl border-l-8 border-red-500">
+                    <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-800">Disadvantages</h3>
+                    <ul class="list-disc ml-5 space-y-2 text-lg">
+                        <li><strong>Material Corrosion:</strong> High temperatures increase structural degradation.</li>
+                        <li><strong>Tritium Management:</strong> Requires specialized containment systems.</li>
+                        <li><strong>Complex Processing:</strong> Online fuel processing is not yet commercially proven.</li>
+                        <li><strong>Regulatory Hurdles:</strong> Lack of historical operational experience.</li>
+                        <li><strong>Waste Forms:</strong> Standardized disposal forms for MSR fuel are still in development.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-12 opacity-60">
+        <p class="font-roca-bold uppercase tracking-[0.4em] text-sm">
+            Nuclear and Radiation Engineering Department • Alexandria University
+        </p>
+    </footer>
+
+</body>
+</html>
