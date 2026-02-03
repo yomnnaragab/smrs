@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - Small Modular Reactors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Roca Two';
+            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
+            font-weight: 900; 
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Roca Two', serif;
+            color: #231f20;
+            background-color: #ffc061;
+        }
+
+        .font-roca-bold {
+            font-weight: 1000;
+        }
+
+        /* Button Styling with Thick Glowing Edges */
+        .glow-btn {
+            background-color: #abe26a;
+            border-radius: 9999px; 
+            text-align: center;
+            font-family: 'Roca Two', serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.8rem 1.2rem;
+            /* Thick Yellow Border Glow */
+            filter: drop-shadow(0px 0px 0px #f4eb29) 
+                    drop-shadow(5px 5px 0px #f4eb29) 
+                    drop-shadow(-5px -5px 0px #f4eb29) 
+                    drop-shadow(5px -5px 0px #f4eb29) 
+                    drop-shadow(-5px 5px 0px #f4eb29);
+        }
+
+        .glow-btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            filter: drop-shadow(0px 0px 20px #f4eb29);
+            background-color: #b9ed7d;
+        }
+
+        .btn-text {
+            font-size: 1.25rem;
+            line-height: 1.1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-8">
+
+    <div class="text-center mb-24">
+        <h1 class="text-7xl md:text-9xl font-roca-bold text-[#231f20] tracking-tighter uppercase">SMRs</h1>
+        <p class="text-xl md:text-3xl font-roca-bold text-[#231f20] mt-4 tracking-widest uppercase">Small Modular Reactors</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-6xl">
+        
+        <a href="introduction.html" class="glow-btn">
+            <span class="btn-text">Introduction</span>
+        </a>
+
+        <a href="manufacturing.html" class="glow-btn">
+            <span class="btn-text">Manufacturing<br>& Operation</span>
+        </a>
+
+        <a href="types.html" class="glow-btn">
+            <span class="btn-text">Types</span>
+        </a>
+
+        <a href="operating_smrs.html" class="glow-btn">
+            <span class="btn-text">Current Operating<br>SMRs</span>
+        </a>
+
+        <a href="nuscale.html" class="glow-btn">
+            <span class="btn-text">Case Study I:<br>NuScale</span>
+        </a>
+
+        <a href="htr-pm.html" class="glow-btn">
+            <span class="btn-text">Case Study II:<br>HTR-PM</span>
+        </a>
+
+    </div>
+
+    <div class="mt-28">
+        <a href="Final_Report.pdf" target="_blank" class="text-2xl md:text-4xl font-roca-bold text-[#231f20] hover:text-black transition duration-300 uppercase">
+            Access Full Report
+        </a>
+    </div>
+
+</body>
+</html>
