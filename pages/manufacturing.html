@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - Manufacturing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/mobile.css">
+    <link rel="stylesheet" href="../assets/css/tabs.css">
+</head>
+<body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
+
+    <div class="w-full max-w-5xl flex justify-start mb-8">
+        <a href="../index.html" class="nav-btn">
+            ← Back to Home
+        </a>
+    </div>
+
+    <!-- Page Title -->
+    <div class="text-center mb-10">
+        <h1 class="text-5xl md:text-7xl font-roca-bold text-[#231f20] tracking-tighter uppercase mb-4">Manufacturing</h1>
+        <p class="text-xl md:text-2xl font-roca-bold text-[#231f20] tracking-wide uppercase opacity-80">
+            Key Components & Fabrication
+        </p>
+    </div>
+
+    <div class="tab-container w-full max-w-6xl">
+        <!-- Tab Navigation -->
+        <div class="tab-nav">
+            <button class="tab-btn active" data-tab="fuel">Reactor Core & Fuel</button>
+            <button class="tab-btn" data-tab="rpv">Pressure Vessel</button>
+            <button class="tab-btn" data-tab="rods">Control Rods</button>
+            <button class="tab-btn" data-tab="steam">Steam Generators</button>
+            <button class="tab-btn" data-tab="ic">I&C Systems</button>
+        </div>
+
+        <!-- Tab Content Wrapper -->
+        <div class="tab-content w-full content-card p-8 md:p-12 shadow-xl bg-[#fffef5]">
+            
+            <!-- Tab 1: Reactor Core & Fuel -->
+            <div id="fuel" class="tab-pane active">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                    Reactor Core & Nuclear Fuel
+                </h2>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        Fuel fabrication begins with uranium dioxide powder, which is pressed into pellets, sintered, and loaded into zirconium alloy cladding to form fuel rods. These rods are assembled into fuel bundles that make up the reactor core, requiring extremely precise geometry to ensure safe heat removal, neutron moderation, and long-term operation.
+                    </p>
+
+                    <p>
+                        Fuel types depend on reactor design. Although LEU and HALEU fabrication processes are similar, HALEU requires stricter criticality controls and specialized licensing. Some advanced SMRs use TRISO fuel, consisting of coated spherical fuel particles that provide exceptional fission product containment and undergo rigorous quality assurance, making them among the safest fuel designs.
+                    </p>
+                </div>
+
+                <div class="mt-12 w-full flex justify-center">
+                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full">
+                        <img src="../assets/images/triso.png" alt="TRISO Fuel Particle" class="w-full h-auto rounded-[1.8rem] shadow-md">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center text-[#231f20]/70 text-sm">
+                            TRISO Fuel particle - US DEPARTMENT OF ENERGY
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Reactor Pressure Vessel -->
+            <div id="rpv" class="tab-pane">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                    The Reactor Pressure Vessel (RPV)
+                </h2>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        The reactor pressure vessel is manufactured from high-strength low-alloy steel using advanced forging, machining, and heat treatment processes. Automated welding techniques ensure high-quality joints with minimal defects.
+                    </p>
+
+                    <p>
+                        Extensive non-destructive testing and hydrostatic pressure tests verify vessel integrity. The smaller size of SMR RPVs simplifies fabrication, transportation, and installation, making them more adaptable to factory-based production environments.
+                    </p>
+                </div>
+
+                <div class="mt-12 w-full flex justify-center">
+                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full">
+                        <img src="../assets/images/pv.jpg" alt="Small Reactor Pressure Vessel" class="w-full h-auto rounded-[1.8rem] shadow-md">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center text-[#231f20]/70 text-sm">
+                            Small Reactor Pressure Vessel
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Control Rods -->
+            <div id="rods" class="tab-pane">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                    Control Rods
+                </h2>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        Control rods regulate reactor power by absorbing neutrons. They are manufactured using absorber materials such as boron carbide, silver–indium–cadmium alloys, or hafnium, enclosed in metallic cladding.
+                    </p>
+
+                    <p>
+                        The completed rods undergo rigorous mechanical, thermal, and vibration testing to ensure maximum reliability during reactor operation, acting as the primary system for both power adjustment and emergency shutdown.
+                    </p>
+                </div>
+
+                <div class="mt-12 w-full flex justify-center">
+                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full">
+                        <img src="../assets/images/cr.avif" alt="Small Reactor Control Rods" class="w-full h-auto rounded-[1.8rem] shadow-md">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center text-[#231f20]/70 text-sm">
+                            Small Reactor Control Rods - NS ENERGY
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Steam Generators -->
+            <div id="steam" class="tab-pane">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                    Steam Generators 
+                </h2>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        Steam generators transfer heat from the reactor to the power cycle and are manufactured from thousands of high-alloy tubes housed within pressure vessels. 
+                    </p>
+
+                    <p>
+                        Advanced manufacturing techniques—including automated welding, high-precision leak detection, and rigorous pressure testing—ensure safe and efficient heat transfer. This high-integrity construction prevents cross-contamination between the primary and secondary coolant circuits.
+                    </p>
+                </div>
+
+                <div class="mt-12 w-full flex justify-center">
+                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full">
+                        <img src="../assets/images/sg.avif" alt="SMR Steam Generators" class="w-full h-auto rounded-[1.8rem] shadow-md">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center text-[#231f20]/70 text-sm">
+                            Steam Generator - Rolls Royce
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 5: I&C Systems -->
+            <div id="ic" class="tab-pane">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                    Instrumentation & Control Systems
+                </h2>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        SMR instrumentation and control systems are fully digital and factory-tested under extensive fault and operating scenarios. This rigorous testing ensures that the system can handle a wide variety of real-world conditions before it ever leaves the factory.
+                    </p>
+
+                    <p>
+                        Once validated, the software is finalized and delivered as an integrated control module. This represents a significant advancement over traditional analog nuclear control systems, offering enhanced precision, automated safety logic, and cyber-secure architectures.
+                    </p>
+                </div>
+
+                <div class="mt-12 w-full flex justify-center">
+                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full text-center">
+                        <img src="../assets/images/ic.png" alt="Digital Control Module Interface" class="w-full h-auto rounded-[1.8rem] shadow-md">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-[#231f20]/70 text-sm">
+                            Cyber Security in Nuclear Power Plants: Insights for Advanced Nuclear Technologies
+                        </p>
+                        <p class="mt-1 font-sans text-xs text-[#231f20]/60 italic">
+                            Poresky, C., Andreades, C., Kendrick, J., & Peterson, P. (2017). University of California, Berkeley.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mt-12 opacity-80 text-center">
+        <p class="font-roca-bold uppercase tracking-[0.3em] text-sm">Nuclear and Radiation Engineering Department • Alexandria University</p>
+    </div>
+
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+
+</body>
+</html>

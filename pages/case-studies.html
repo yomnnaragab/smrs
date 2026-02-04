@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - Implementation Case Studies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/mobile.css">
+    <link rel="stylesheet" href="../assets/css/tabs.css">
+</head>
+<body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
+
+    <div class="w-full max-w-5xl flex justify-start mb-8">
+        <a href="../index.html" class="nav-btn">
+            ← Back to Home
+        </a>
+    </div>
+
+    <!-- Page Title -->
+    <div class="text-center mb-10">
+        <h1 class="text-5xl md:text-7xl font-roca-bold text-[#231f20] tracking-tighter uppercase mb-4">Case Studies</h1>
+        <p class="text-xl md:text-2xl font-roca-bold text-[#231f20] tracking-wide uppercase opacity-80">
+            Real-World Implementations
+        </p>
+    </div>
+
+    <div class="tab-container w-full max-w-7xl">
+        <!-- Tab Navigation -->
+        <div class="tab-nav">
+            <button class="tab-btn active" data-tab="nuscale">NuScale NPM™ (USA)</button>
+            <button class="tab-btn" data-tab="htrpm">HTR-PM (China)</button>
+        </div>
+
+        <!-- Tab Content Wrapper -->
+        <div class="tab-content w-full bg-[#faedd4]/50 rounded-3xl p-4 md:p-8">
+            
+            <!-- Tab 1: NuScale -->
+            <div id="nuscale" class="tab-pane active">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#231f20]">NuScale Power Module™</h2>
+                    <p class="text-xl mt-4 font-roca-bold opacity-70">A scalable pressurized water reactor design from the United States.</p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-12 items-start mb-12">
+                    <div class="flex-1 w-full lg:w-2/3">
+                        <section class="glass-card mb-8">
+                            <h2 class="section-title font-roca-bold">Project Overview</h2>
+                            <p class="text-lg leading-relaxed">
+                                The NuScale Power Module™ is a light-water-cooled SMR PWR with scalable plant configurations. The standard plant offers up to 12 modules, each producing 77 MWe (gross), for a total plant output of 924 MWe.
+                                Each factory-fabricated, self-contained module operates independently and is managed from a single control room. The design employs natural circulation cooling, eliminating the need for reactor coolant pumps.
+                            </p>
+                        </section>
+
+                        <section class="glass-card mb-8">
+                            <h2 class="section-title font-roca-bold">Design Philosophy & Safety</h2>
+                            <div class="space-y-4 text-lg leading-relaxed">
+                                <p><strong>Simplicity:</strong> By placing the core, steam generators, and pressurizer inside a single integral vessel, large primary piping is eliminated, removing LOCA risks.</p>
+                                <p><strong>Passive Safety:</strong> The design relies on physics (gravity, convection) rather than electricity. The Triple Crown of Safety™ ensures indefinite cooling without operator action, AC/DC power, or additional water.</p>
+                                <p><strong>Resilience:</strong> Modules are submerged in a large reactor pool that serves as an ultimate heat sink for up to 150 days.</p>
+                            </div>
+                        </section>
+
+                        <section class="glass-card mb-8">
+                            <h2 class="section-title font-roca-bold">Fuel & Waste Strategy</h2>
+                            <ul class="list-disc ml-6 space-y-2 text-lg">
+                                <li><strong>Fuel:</strong> Standard UO₂ assemblies (17x17) with < 4.95% enrichment.</li>
+                                <li><strong>Cycle:</strong> 18-month refueling cycle with "in-out" shuffle scheme.</li>
+                                <li><strong>Storage:</strong> Up to 15 years in cooling pools followed by on-site dry cask storage for the plant's 60-year life.</li>
+                            </ul>
+                        </section>
+
+                         <section class="glass-card mb-8">
+                            <h2 class="section-title font-roca-bold">Target Applications</h2>
+                            <div class="grid grid-cols-2 gap-4 text-lg">
+                                <div>• Baseload Electricity</div>
+                                <div>• Load-Following Renewables</div>
+                                <div>• District Heating</div>
+                                <div>• Hydrogen Production</div>
+                                <div>• Desalination</div>
+                                <div>• Coal Plant Repowering</div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="w-full lg:w-1/3">
+                        <div class="bg-[#ffe373] p-4 rounded-[3rem] border-[10px] border-[#abe26a] shadow-xl mb-6">
+                            <img src="../assets/images/nuscale.png" alt="NuScale Module" class="w-full h-auto rounded-[2rem]">
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <h3 class="font-roca-bold uppercase text-xl mb-2">Key Stats</h3>
+                            <div class="text-left space-y-2 text-sm md:text-base">
+                                <p><strong>Power:</strong> 77 MWe per module</p>
+                                <p><strong>Type:</strong> Integral ipWR</p>
+                                <p><strong>Coolant:</strong> Light Water</p>
+                                <p><strong>Circulation:</strong> Natural</p>
+                                <p><strong>Status:</strong> US NRC Design Approval (2023)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: HTR-PM -->
+            <div id="htrpm" class="tab-pane">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#231f20]">HTR-PM</h2>
+                    <p class="text-xl mt-4 font-roca-bold opacity-70">The world's first commercial High-Temperature Gas-Cooled Reactor.</p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-12 items-start mb-12">
+                    <div class="flex-1 w-full lg:w-2/3">
+                        <section class="glass-card mb-8">
+                            <h2 class="section-title font-roca-bold">Project Overview</h2>
+                            <p class="text-lg leading-relaxed">
+                                Developed by Tsinghua University, the HTR-PM (High-Temperature Reactor-Pebble-bed Modules) connects two 250 MWt reactor modules to a single 210 MWe steam turbine. 
+                                It represents the transition from the experimental HTR-10 to a commercial-scale demonstration plant.
+                                <br><br>
+                                <strong>Status:</strong> Connected to the grid in Dec 2021; Commercial operation began Dec 2023.
+                            </p>
+                        </section>
+
+                        <section class="glass-card mb-8">
+                            <h2 class="section-title font-roca-bold">Design Philosophy & Safety</h2>
+                            <div class="space-y-4 text-lg leading-relaxed">
+                                <p><strong>Inherent Safety:</strong> The design eliminates the possibility of core melt. The low power density and high thermal capacity of the graphite moderator ensure peak temperatures stay below 1600°C even during total loss of cooling.</p>
+                                <p><strong>TRISO Fuel:</strong> Encapsulates fission products within ceramic layers effectively containing radiation at the source.</p>
+                                <p><strong>Passive Cooling:</strong> Decay heat is removed via the Reactor Cavity Cooling System (RCCS) through natural processes (conduction/radiation).</p>
+                            </div>
+                        </section>
+
+                        <section class="glass-card mb-8">
+                            <h2 class="section-title font-roca-bold">Fuel Cycle Strategy</h2>
+                             <ul class="list-disc ml-6 space-y-2 text-lg">
+                                <li><strong>Fuel Format:</strong> Spherical "Pebbles" (60mm diameter) containing TRISO particles.</li>
+                                <li><strong>Refueling:</strong> Continuous on-line refueling. Fresh pebbles are added to the top, and spent pebbles are discharged from the bottom.</li>
+                                <li><strong>Cycle:</strong> "Once-through" cycle. Pebbles pass through the core multiple times (~15) until target burnup is reached.</li>
+                            </ul>
+                        </section>
+
+                        <section class="glass-card mb-8">
+                            <h2 class="section-title font-roca-bold">Target Applications</h2>
+                            <div class="grid grid-cols-2 gap-4 text-lg">
+                                <div>• Efficient Power Generation</div>
+                                <div>• High-Temperature Process Heat</div>
+                                <div>• Hydrogen Production</div>
+                                <div>• District Heating</div>
+                            </div>
+                        </section>
+
+                        <section class="glass-card mb-8">
+                            <h2 class="section-title font-roca-bold">Waste Management</h2>
+                            <p class="text-lg leading-relaxed">
+                                The HTR-PM waste management strategy uses automated handling and long-term on-site dry storage for spent fuel. Spent fuel is stored in sealed, shielded tanks with passive cooling ensured by natural ventilation, even under accident conditions. Final disposal is planned in a national geological repository.
+                            </p>
+                        </section>
+                    </div>
+
+                    <div class="w-full lg:w-1/3">
+                         <div class="bg-[#ffe373] p-4 rounded-[3rem] border-[10px] border-[#abe26a] shadow-xl mb-6">
+                            <img src="../assets/images/HTRPM.png" alt="HTR-PM Diagram" class="w-full h-auto rounded-[2rem]">
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <h3 class="font-roca-bold uppercase text-xl mb-2">Key Stats</h3>
+                            <div class="text-left space-y-2 text-sm md:text-base">
+                                <p><strong>Power:</strong> 210 MWe (2 modules)</p>
+                                <p><strong>Temp:</strong> 750°C Outlet</p>
+                                <p><strong>Coolant:</strong> Helium Gas</p>
+                                <p><strong>Moderator:</strong> Graphite</p>
+                                <p><strong>Location:</strong> Shidao Bay, China</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mt-12 opacity-80 text-center">
+        <p class="font-roca-bold uppercase tracking-[0.3em] text-sm">Nuclear and Radiation Engineering Department • Alexandria University</p>
+    </div>
+
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+
+</body>
+</html>

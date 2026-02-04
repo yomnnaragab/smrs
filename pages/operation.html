@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - Operation Lifecycle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/mobile.css">
+    <link rel="stylesheet" href="../assets/css/tabs.css">
+</head>
+<body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
+
+    <div class="w-full max-w-5xl flex justify-start mb-8">
+        <a href="../index.html" class="nav-btn">
+            ← Back to Home
+        </a>
+    </div>
+
+    <!-- Page Title -->
+    <div class="text-center mb-10">
+        <h1 class="text-5xl md:text-7xl font-roca-bold text-[#231f20] tracking-tighter uppercase mb-4">Operation</h1>
+        <p class="text-xl md:text-2xl font-roca-bold text-[#231f20] tracking-wide uppercase opacity-80">
+            Lifecycle & Safety Systems
+        </p>
+    </div>
+
+    <div class="tab-container w-full max-w-6xl">
+        <!-- Tab Navigation -->
+        <div class="tab-nav">
+            <button class="tab-btn active" data-tab="licensing">Licensing</button>
+            <button class="tab-btn" data-tab="startup">Startup</button>
+            <button class="tab-btn" data-tab="normal">Normal Operation</button>
+            <button class="tab-btn" data-tab="safety">Safety Systems</button>
+            <button class="tab-btn" data-tab="removal">Decommissioning</button>
+        </div>
+
+        <!-- Tab Content Wrapper -->
+        <div class="tab-content w-full content-card p-8 md:p-12 shadow-xl bg-[#fffef5]">
+            
+            <!-- Tab 1: Licensing -->
+            <div id="licensing" class="tab-pane active">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                    Licensing & Commissioning
+                </h2>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        SMR licensing and commissioning are conducted by national nuclear regulators to verify compliance with safety and operational standards. This oversight ensures that the unique modular designs and passive safety features of SMRs meet rigorous international nuclear-grade requirements.
+                    </p>
+
+                    <p>
+                        The process includes design certification, combined construction and operating approval, and comprehensive testing. This phase focuses heavily on validating passive safety systems, reactor protection logic, and digital instrumentation and control (I&C) systems to guarantee a safe and predictable performance before official operation begins.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tab 2: Startup -->
+            <div id="startup" class="tab-pane">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                    Startup & Power Ascension
+                </h2>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        SMR startup procedures are simplified due to inherent stability and standardized designs, beginning with fuel loading. The approach to criticality is closely monitored using neutron detectors and reactivity measurements to ensure a controlled and predictable rise in neutron flux.
+                    </p>
+
+                    <p>
+                        During power ascension, advanced digital control systems, including model-based predictive control (MPC), assist operators in managing the reactor’s thermohydraulic and neutronic behavior. This automation ensures the transition from zero power to full operational capacity is handled with high precision and safety.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tab 3: Normal Operation -->
+            <div id="normal" class="tab-pane">
+                <div class="text-center mb-8 border-b-2 border-[#231f20] pb-4">
+                    <h2 class="text-3xl md:text-5xl font-roca-bold uppercase">
+                        Normal Operation &
+                    </h2>
+                    <h2 class="text-3xl md:text-5xl font-roca-bold uppercase">
+                        Thermal-Hydraulic Behavior
+                    </h2>
+                </div>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        SMRs operate using simplified thermal-hydraulic systems that rely on natural circulation for heat removal and stability. By utilizing natural forces like gravity and buoyancy, these reactors reduce mechanical complexity and the need for active pumps.
+                    </p>
+
+                    <p>
+                        Reactor power is regulated through control rods and coolant flow adjustments, while inherent negative temperature feedback—such as Doppler broadening—provides robust passive safety. Furthermore, advanced digital monitoring and predictive digital twin tools are used to optimize real-time performance and support proactive maintenance strategies.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tab 4: Safety Systems -->
+            <div id="safety" class="tab-pane">
+                <div class="text-center mb-8 border-b-2 border-[#231f20] pb-4">
+                    <h2 class="text-3xl md:text-5xl font-roca-bold uppercase">
+                        Safety Systems:
+                    </h2>
+                    <h2 class="text-3xl md:text-5xl font-roca-bold uppercase">
+                        Passive and Digital
+                    </h2>
+                </div>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        SMR safety systems emphasize passive mechanisms that ensure cooling and shutdown without active components or operator action. These include natural-circulation cooling, gravity-driven emergency injection, and passive decay-heat removal, which remain effective even during total power loss.
+                    </p>
+
+                    <p>
+                        The inherent design, featuring reduced primary piping, substantially lowers the risk of loss-of-coolant accidents (LOCA). To complement these physical safeguards, digital safety systems incorporate redundant sensors, automated protection logic, and AI-assisted monitoring within cyber-secure architectures to maintain defense-in-depth.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tab 5: Decommissioning -->
+            <div id="removal" class="tab-pane">
+                <div class="text-center mb-8 border-b-2 border-[#231f20] pb-4">
+                    <h2 class="text-3xl md:text-5xl font-roca-bold uppercase">
+                        Decommissioning &
+                    </h2>
+                    <h2 class="text-3xl md:text-5xl font-roca-bold uppercase">
+                        Module Removal
+                    </h2>
+                </div>
+
+                <div class="space-y-8 text-lg md:text-xl leading-relaxed text-center">
+                    <p>
+                        SMR decommissioning is simplified by modular designs that allow entire reactor modules to be removed and transported to centralized waste management facilities. This "plug-and-play" approach to removal significantly reduces on-site handling complexity.
+                    </p>
+
+                    <p>
+                        Compared to large conventional reactors, SMRs offer shorter decommissioning timelines and reduced on-site labor requirements. Because of the compact architecture and remote transport capability, there is a substantially lower occupational radiation exposure for workers throughout the end-of-life phase.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mt-12 opacity-80 text-center">
+        <p class="font-roca-bold uppercase tracking-[0.3em] text-sm">Nuclear and Radiation Engineering Department • Alexandria University</p>
+    </div>
+
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+
+</body>
+</html>
