@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - Water-Cooled SMRs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/mobile.css">
+</head>
+<body class="min-h-screen p-6 md:p-12">
+
+    <div class="fixed top-6 left-6 z-50">
+        <a href="types.html" class="nav-btn bg-[#ffe373] border-[6px] border-[#abe26a] rounded-full py-2 px-6 font-roca-bold text-[#231f20] uppercase shadow-lg block">
+            ← Types
+        </a>
+    </div>
+
+    <header class="w-full max-w-7xl mx-auto text-center mt-20 mb-20">
+        <h1 class="text-6xl md:text-8xl font-roca-bold uppercase tracking-tighter leading-none">
+            Water-Cooled SMRs
+        </h1>
+        
+    </header>
+
+    <main class="w-full max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            
+            <section class="glass-card">
+                <h2 class="section-title font-roca-bold">Coolant & Moderator</h2>
+                <p class="text-lg leading-relaxed">
+                    Water-cooled SMR-PWRs operate on established light-water technology, using water as both a coolant and moderator within a compact, integral reactor vessel. By utilizing natural circulation driven by density differences, these designs eliminate the need for reactor coolant pumps, significantly reducing parasitic power consumption and mechanical failure modes.
+                </p>
+            </section>
+
+            <section class="glass-card">
+                <h2 class="section-title font-roca-bold">Fuel & Core Design</h2>
+                <p class="text-lg leading-relaxed">
+                    The core utilizes standard UO2 fuel assemblies (enrichment < 5% U-235). Its compact geometry supports natural circulation and maintains strongly negative reactivity feedback. The entire primary system is enclosed in a compact steel containment, managed through control rods and burnable absorbers.
+                </p>
+            </section>
+
+            <section class="glass-card">
+                <h2 class="section-title font-roca-bold">Safety Features</h2>
+                <div class="text-lg leading-relaxed">
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>Control rods insert by gravity during shutdown.</li>
+                        <li>Passive heat exchangers remove decay heat.</li>
+                        <li>Elimination of large primary piping reduces LOCA probability.</li>
+                    </ul>
+                    <p class="mt-3 text-sm italic">Ensures cooling without operator action or external power.</p>
+                </div>
+            </section>
+
+            <section class="glass-card">
+                <h2 class="section-title font-roca-bold">Refueling & Waste</h2>
+                <p class="text-lg leading-relaxed">
+                    Cycles range between 18–24 months with burnups exceeding 45 GWd/tHM. Spent fuel is stored in pools and then dry casks (MPC-37). Integral designs reduce neutron leakage, slowing vessel embrittlement and limiting structural activation.
+                </p>
+            </section>
+
+        </div>
+
+        <section class="w-full flex justify-center mb-12">
+            <div class="bg-[#ffe373] p-4 rounded-[3rem] border-[10px] border-[#abe26a] shadow-xl max-w-4xl">
+                <img src="images/wcr.jpg" alt="Water Cooled Reactor Diagram" class="w-full h-auto rounded-[2rem]">
+            </div>
+        </section>
+
+        <section class="glass-card mb-20">
+            <h2 class="section-title font-roca-bold">Technical Analysis</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                
+                <div class="p-6 rounded-2xl border-l-8 border-green-500">
+                    <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-800">Advantages</h3>
+                    <ul class="list-disc ml-5 space-y-2 text-lg">
+                        <li>Enhanced Passive Safety systems.</li>
+                        <li>Modular Construction & Scalability.</li>
+                        <li>High-Pressure Efficient Operation.</li>
+                        <li>Reduced Radioactive Inventory.</li>
+                        <li>Long Refueling Intervals (up to 5 years).</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-2xl border-l-8 border-red-500">
+                    <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-800">Disadvantages</h3>
+                    <ul class="list-disc ml-5 space-y-2 text-lg">
+                        <li>Higher Specific Capital Cost ($/MWe).</li>
+                        <li>Limited Power Output per module.</li>
+                        <li>Neutronics & Thermal-Hydraulics challenges.</li>
+                        <li>Regulatory & Licensing Uncertainty.</li>
+                        <li>Lower Economic Competitiveness vs large plants.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-12 opacity-60">
+        <p class="font-roca-bold uppercase tracking-[0.4em] text-sm">
+            Nuclear and Radiation Engineering Department • Alexandria University
+        </p>
+    </footer>
+
+</body>
+</html>

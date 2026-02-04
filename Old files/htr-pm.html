@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRs - HTR-PM Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/mobile.css">
+</head>
+<body class="min-h-screen p-6 md:p-12">
+
+    <div class="fixed top-6 left-6 z-50">
+        <a href="index.html" class="nav-btn bg-[#ffe373] border-[6px] border-[#abe26a] rounded-full py-2 px-6 font-roca-bold text-[#231f20] uppercase shadow-lg block">
+            ← Home
+        </a>
+    </div>
+
+    <header class="w-full max-w-7xl mx-auto text-center mt-20 mb-20">
+        <h1 class="text-6xl md:text-8xl font-roca-bold uppercase tracking-tighter leading-none">
+            HTR-PM
+        </h1>
+        <p class="text-2xl font-roca-bold opacity-80 mt-6 tracking-[0.2em] uppercase">
+            Case Study II • China 
+        </p>
+    </header>
+
+    <main class="w-full max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            
+            <div class="flex-1 w-full lg:w-2/3">
+                
+                <section class="glass-card">
+                    <h2 class="section-title font-roca-bold">Overview</h2>
+                    <p class="text-xl leading-relaxed">
+                        China’s high-temperature gas-cooled reactor program began with the HTR-10, a 10 MWₜ pebble-bed test reactor built at Tsinghua University and brought to full power in 2003. Extensive experiments on HTR-10 demonstrated the inherent safety characteristics of modular HTGRs under challenging operating conditions. The success of this program led to the launch of the HTR-PM pebble-bed reactor project in 2001, marking the transition from experimental validation to a larger, modular reactor design.
+                    </p>
+                </section>
+
+                <section class="glass-card">
+                    <h2 class="section-title font-roca-bold">Target Applications</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xl">
+                        <div class="font-roca-bold uppercase">1. Electricity Generation</div>
+                        <div class="font-roca-bold uppercase">2. District Heating</div>
+                        <div class="font-roca-bold uppercase">3. Industrial Steam Supply</div>
+                        <div class="font-roca-bold uppercase">4. Hydrogen Production</div>
+                    </div>
+                </section>
+
+                <section class="glass-card">
+                    <h2 class="section-title font-roca-bold">Design Philosophy</h2>
+                    <div class="space-y-4 text-xl leading-relaxed">
+                        <p>The HTR-PM design prioritizes inherent and passive safety through TRISO fuel, a low-power-density pebble-bed core, and helium coolant, allowing safe operation without active systems or operator intervention, even in severe accidents. Its modular configuration improves simplicity, flexibility, and scalability, while graphite moderation and high thermal inertia keep temperatures below fuel failure limits during cooling or flow losses. Emphasis on standardized, manufacturable components further enhances reliability and industrial practicality.</p>
+                    </div>
+                </section>
+
+                <section class="glass-card">
+                    <h2 class="section-title font-roca-bold">Safety Features</h2>
+                    <div class="space-y-4 text-xl leading-relaxed">
+                        <p>The HTR-PM achieves a high level of inherent safety through passive mechanisms, robust physical design, and multiple engineered barriers. It features a low radioactive inventory, strong accident tolerance, and inherent safety characteristics such as low power density, high-quality TRISO fuel, and a large negative temperature coefficient. Decay heat is removed passively through conduction, radiation, and the Reactor Cavity Cooling System, ensuring fuel temperatures remain within safe limits even without active systems. Multiple containment barriers and effective chemical control measures further limit radioactive release and mitigate water or air ingress, ensuring safe operation under both normal and accident conditions.</p>
+                    </div>
+                </section>
+
+                <section class="glass-card">
+                    <h2 class="section-title font-roca-bold">Licensing Status</h2>
+                    <div class="space-y-4 text-xl leading-relaxed">
+                        <p><strong>August 2021:</strong> The Operating License was granted following FSAR approval.</p>
+                        <p><strong>December 2023:</strong> Commercial operation</p>
+                    </div>
+                </section>
+
+                <section class="glass-card">
+                    <h2 class="section-title font-roca-bold">Fuel Cycle Approach</h2>
+                    <div class="space-y-4 text-xl leading-relaxed">
+                        <p>The HTR-PM adopts a once-through pebble-bed fuel cycle using spherical TRISO-coated fuel elements containing UO₂ kernels. Fuel is handled and stored in dedicated transport and storage systems that maintain subcritical conditions and support continuous operation. Unlike conventional reactors, HTR-PM uses fully automated on-power refueling, with fresh pebbles added at the top of the core and spent or partially burned pebbles discharged from the bottom, measured for burnup, and either recycled or removed. The fuel cycle progresses from an initial mixed graphite–fuel core to equilibrium operation with fully enriched fuel, enabling stable power production and efficient core management without shutdown refueling.</p>
+                    </div>
+                </section>
+
+                <section class="glass-card mb-20">
+                    <h2 class="section-title font-roca-bold">Waste Management</h2>
+                    <div class="space-y-4 text-xl leading-relaxed">
+                        <p>The HTR-PM waste management strategy uses automated handling and long-term on-site dry storage for spent fuel, with tanks transferred through staged storage areas to allow decay heat reduction. Spent fuel is stored in sealed, shielded tanks with passive cooling ensured by natural ventilation, even under accident conditions. Final disposal is planned in a national geological repository</p>
+                    </div>
+                </section>
+
+            </div>
+
+            <aside class="w-full lg:w-1/3 sticky-aside">
+                <div class="bg-[#ffe373] p-4 rounded-[3rem] border-[10px] border-[#abe26a] shadow-xl">
+                    <img src="../assets/images/HTRPM.png" alt="HTRPM Reactor" class="w-full h-auto rounded-[2rem]">
+                </div>
+                <p class="mt-6 text-center font-roca-bold opacity-60 italic text-sm leading-tight uppercase tracking-widest">
+                    HTRPM: Pebble-Bed <br> High-Temperature Visual
+                </p>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-12 opacity-60">
+        <p class="font-roca-bold uppercase tracking-[0.4em] text-sm">
+            Nuclear and Radiation Engineering Department • Alexandria University
+        </p>
+    </footer>
+
+</body>
+</html>
