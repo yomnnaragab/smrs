@@ -5,55 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMRs - Small Modular Reactors</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @font-face {
-            font-family: 'Roca Two';
-            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
-            font-weight: 900; 
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'Roca Two', serif;
-            color: #231f20;
-            background-color: #ffc061;
-        }
-
-        .font-roca-bold {
-            font-weight: 1000;
-        }
-
-        /* Button Styling with Thick Glowing Edges */
-        .glow-btn {
-            background-color: #abe26a;
-            border-radius: 9999px; 
-            text-align: center;
-            font-family: 'Roca Two', serif;
-            font-weight: 1000;
-            text-transform: uppercase;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.8rem 1.2rem;
-            filter: drop-shadow(0px 0px 0px #f4eb29) 
-                    drop-shadow(5px 5px 0px #f4eb29) 
-                    drop-shadow(-5px -5px 0px #f4eb29) 
-                    drop-shadow(5px -5px 0px #f4eb29) 
-                    drop-shadow(-5px 5px 0px #f4eb29);
-        }
-
-        .glow-btn:hover {
-            transform: translateY(-8px) scale(1.05);
-            filter: drop-shadow(0px 0px 20px #f4eb29);
-            background-color: #b9ed7d;
-        }
-
-        .btn-text {
-            font-size: 1.25rem;
-            line-height: 1.1;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/mobile.css">
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-8">
 
@@ -84,13 +37,13 @@
     </div>
 
     <div class="mt-12 w-full max-w-xs">
-        <a href="pdfs/poster.pdf" target="_blank" class="glow-btn">
+        <a href="assets/pdfs/poster.pdf" target="_blank" class="glow-btn">
             <span class="btn-text">Project Poster</span>
         </a>
     </div>
 
     <div class="mt-20">
-        <a href="pdfs/main.pdf" target="_blank" class="text-2xl md:text-4xl font-roca-bold text-[#231f20] hover:text-black hover:underline transition duration-300 uppercase opacity-90 hover:opacity-100">
+        <a href="assets/pdfs/main.pdf" target="_blank" class="text-2xl md:text-4xl font-roca-bold text-[#231f20] hover:text-black hover:underline transition duration-300 uppercase opacity-90 hover:opacity-100">
             Access Full Report
         </a>
     </div>

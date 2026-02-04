@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'Roca Two';
+    src: url('../fonts/RocaTwo-Bold.woff2') format('woff2'); 
+    font-weight: 900; 
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roca Two', serif;
+    color: #231f20;
+    background-color: #ffc061;
+    scroll-behavior: smooth;
+}
+
+.font-roca-bold {
+    font-weight: 1000;
+}
+
+/* General Buttons */
+.btn-hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-hover:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05);
+}
+
+.nav-btn {
+    background-color: #ffe373;
+    border: 6px solid #abe26a;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    font-family: 'Roca Two', serif;
+    font-weight: 1000;
+    text-transform: uppercase;
+    color: #231f20;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Cards */
+.glass-card {
+    background: rgba(255, 227, 115, 0.7);
+    backdrop-filter: blur(10px);
+    border-left: 12px solid #abe26a;
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    box-shadow: 10px 10px 0px rgba(35, 31, 32, 0.05);
+    height: 100%;
+    margin-bottom: 2.5rem; 
+}
+
+.type-card {
+    background: rgba(255, 227, 115, 0.7); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    border: 6px solid #abe26a; 
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 12px 12px 25px rgba(171, 226, 106, 0.4), 12px 12px 0px #abe26a; 
+}
+
+.content-card {
+    background-color: #ffe373;
+    border: 10px solid #abe26a;
+    border-radius: 3rem;
+}
+
+/* Typography */
+.section-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    color: #231f20;
+    display: inline-block;
+    border-bottom: 4px solid #231f20;
+    padding-bottom: 0.5rem;
+}
+
+/* Hexagon / Hive */
+.hive-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.hexagon-shape {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    aspect-ratio: 1 / 0.85;
+    padding: 2.5rem;
+    background-color: #abe26a;
+    position: relative;
+}
+
+.hex-wrapper {
+    filter: drop-shadow(0px 0px 0px #f4eb29) 
+            drop-shadow(5px 5px 0px #f4eb29) 
+            drop-shadow(-5px -5px 0px #f4eb29) 
+            drop-shadow(5px -5px 0px #f4eb29) 
+            drop-shadow(-5px 5px 0px #f4eb29);
+    width: 260px;
+    margin: 0 -15px; 
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.hex-wrapper:hover {
+    transform: scale(1.1);
+    z-index: 50;
+    filter: drop-shadow(0px 0px 20px #f4eb29);
+}
+
+.hex-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.hex-text {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* Glow Button (Index) */
+.glow-btn {
+    background-color: #abe26a;
+    border-radius: 9999px; 
+    text-align: center;
+    font-family: 'Roca Two', serif;
+    font-weight: 1000;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem 1.2rem;
+    filter: drop-shadow(0px 0px 0px #f4eb29) 
+            drop-shadow(5px 5px 0px #f4eb29) 
+            drop-shadow(-5px -5px 0px #f4eb29) 
+            drop-shadow(5px -5px 0px #f4eb29) 
+            drop-shadow(-5px 5px 0px #f4eb29);
+}
+
+.glow-btn:hover {
+    transform: translateY(-8px) scale(1.05);
+    filter: drop-shadow(0px 0px 20px #f4eb29);
+    background-color: #b9ed7d;
+}
+
+.btn-text {
+    font-size: 1.25rem;
+    line-height: 1.1;
+}
+
+/* Tables */
+.tech-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    border: 2px solid #abe26a;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.tech-table th, .tech-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(35, 31, 32, 0.1);
+}
+
+.tech-table th {
+    background-color: #abe26a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rounded-table-container {
+    border: 2px solid #abe26a;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.rounded-table-container table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.rounded-table-container th {
+    background-color: #abe26a;
+    padding: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid #abe26a;
+}
+
+.rounded-table-container td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(171, 226, 106, 0.4);
+}
+
+.rounded-table-container tr:last-child td {
+    border-bottom: none;
+}
+
+.rounded-table-container tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.sticky-aside {
+    position: sticky;
+    top: 2rem;
+}
+
+.explore-link {
+    background: rgba(171, 226, 106, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #231f20;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    font-weight: 1000;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    border: 4px solid #f4eb29;
+    transition: all 0.4s ease;
+}
+
+.explore-link:hover {
+    background: rgba(171, 226, 106, 1);
+    backdrop-filter: blur(0px);
+}
+
+/* Operating SMRs specific overrides classes */
+.hive-container.column-layout {
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.hex-row { 
+    display: flex; 
+    justify-content: center; 
+    width: 100%;
+}
+
+.row-2 {
+    margin-top: -55px; 
+    margin-bottom: -55px; 
+}
+
+/* Fix for hex wrapper size in operating_smrs */
+.hex-wrapper.small {
+    width: 220px;
+    margin: -5px;
+}
+.hex-wrapper.small:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0px 0px 15px #f4eb29);
+}

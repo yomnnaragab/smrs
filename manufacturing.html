@@ -5,76 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMRs - Manufacturing & Operation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @font-face {
-            font-family: 'Roca Two';
-            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
-            font-weight: 900; 
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'Roca Two', serif;
-            color: #231f20;
-            background-color: #ffc061;
-        }
-
-        .font-roca-bold {
-            font-weight: 1000;
-        }
-
-        /* Upgraded Hexagon Shape & Interactive Transition */
-        .hexagon-shape {
-            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            aspect-ratio: 1 / 0.85;
-            padding: 1.5rem;
-            background-color: #abe26a;
-        }
-
-        /* Enhanced Glow & Tiling Border */
-        .hex-wrapper {
-            filter: drop-shadow(0px 0px 0px #f4eb29) 
-                    drop-shadow(4px 4px 0px #f4eb29) 
-                    drop-shadow(-4px -4px 0px #f4eb29) 
-                    drop-shadow(4px -4px 0px #f4eb29) 
-                    drop-shadow(-4px 4px 0px #f4eb29);
-            width: 200px; /* Increased for better visibility */
-            margin: -2px; /* Pulls them together to touch */
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hex-wrapper:hover {
-            transform: scale(1.12);
-            z-index: 50;
-            filter: drop-shadow(0px 0px 15px #f4eb29); /* Upgraded Glow */
-        }
-
-        .hive-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-
-        .hex-row { 
-            display: flex; 
-            justify-content: center; 
-            width: 100%;
-        }
-
-        /* Vertical Tiling to lock edges */
-        .hex-row:nth-child(2) {
-            margin-top: -50px; /* Tiling pull-up */
-            margin-bottom: -50px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/mobile.css">
 </head>
 <body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
 

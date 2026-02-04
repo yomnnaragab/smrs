@@ -5,85 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMRs - Reactor Types Menu</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @font-face {
-            font-family: 'Roca Two';
-            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
-            font-weight: 900; 
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'Roca Two', serif;
-            color: #231f20;
-            background-color: #ffc061;
-            scroll-behavior: smooth;
-        }
-
-        .font-roca-bold {
-            font-weight: 1000;
-        }
-
-        /* Nav Button (Back to Top Left) */
-        .nav-btn {
-            background-color: #ffe373;
-            border: 6px solid #abe26a;
-            border-radius: 9999px;
-            padding: 0.5rem 1.5rem;
-            font-family: 'Roca Two', serif;
-            font-weight: 1000;
-            text-transform: uppercase;
-            color: #231f20;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .nav-btn:hover {
-            transform: scale(1.1);
-            filter: brightness(1.1);
-        }
-
-        /* Glass-morphism Cards with Requested Yellow Background */
-        .type-card {
-            /* Updated to rgba(255, 227, 115, 0.7) */
-            background: rgba(255, 227, 115, 0.7); 
-            backdrop-filter: blur(15px); 
-            -webkit-backdrop-filter: blur(15px);
-            border: 6px solid #abe26a; 
-            border-radius: 2.5rem;
-            padding: 2.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 12px 12px 25px rgba(171, 226, 106, 0.4), 12px 12px 0px #abe26a; 
-        }
-
-        /* Interactive Button */
-        .explore-link {
-            background: rgba(171, 226, 106, 0.6);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: #231f20;
-            padding: 0.75rem 1.5rem;
-            border-radius: 1.5rem;
-            text-align: center;
-            font-weight: 1000;
-            text-transform: uppercase;
-            margin-top: 1.5rem;
-            border: 4px solid #f4eb29;
-            transition: all 0.4s ease;
-        }
-
-        .explore-link:hover {
-            background: rgba(171, 226, 106, 1);
-            backdrop-filter: blur(0px);
-            -webkit-backdrop-filter: blur(0px);
-            transform: translateY(-3px);
-            border-color: #f4eb29; 
-            box-shadow: 0 0 20px rgba(244, 235, 41, 0.8), 0 0 40px rgba(171, 226, 106, 0.6);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/mobile.css">
 </head>
 <body class="min-h-screen p-6 md:p-12">
 

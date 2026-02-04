@@ -5,72 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMRs - Water Cooled Status</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @font-face {
-            font-family: 'Roca Two';
-            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
-            font-weight: 900; 
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'Roca Two', serif;
-            color: #231f20;
-            background-color: #ffc061;
-        }
-
-        .font-roca-bold {
-            font-weight: 1000;
-        }
-
-        .content-card {
-            background-color: #ffe373;
-            border: 10px solid #abe26a;
-            border-radius: 3rem;
-        }
-
-        /* Table Styling with Rounded Edges */
-        .rounded-table-container {
-            border: 2px solid #abe26a;
-            border-radius: 2rem; /* Matches card vibe */
-            overflow: hidden; /* Clips the table corners */
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-        }
-
-        th {
-            background-color: #abe26a;
-            padding: 18px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border-bottom: 2px solid #abe26a;
-        }
-
-        td {
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid rgba(171, 226, 106, 0.4);
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* Zebra striping for better readability */
-        tr:nth-child(even) td {
-            background-color: rgba(255, 255, 255, 0.15);
-        }
-
-        .btn-hover:hover {
-            transform: translateY(-3px);
-            filter: brightness(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/mobile.css">
 </head>
 <body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
 

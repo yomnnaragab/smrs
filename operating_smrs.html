@@ -5,77 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMRs - Current Operating Types</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @font-face {
-            font-family: 'Roca Two';
-            src: url('fonts/RocaTwo-Bold.woff2') format('woff2'); 
-            font-weight: 900; 
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'Roca Two', serif;
-            color: #231f20;
-            background-color: #ffc061;
-        }
-
-        .font-roca-bold {
-            font-weight: 1000;
-        }
-
-        /* Larger Hexagon Shape */
-        .hexagon-shape {
-            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            aspect-ratio: 1 / 0.85;
-            padding: 2rem;
-            background-color: #abe26a;
-            position: relative;
-        }
-
-        /* Connected Yellow Borders */
-        .hex-wrapper {
-            filter: drop-shadow(0px 0px 0px #f4eb29) 
-                    drop-shadow(5px 5px 0px #f4eb29) 
-                    drop-shadow(-5px -5px 0px #f4eb29) 
-                    drop-shadow(5px -5px 0px #f4eb29) 
-                    drop-shadow(-5px 5px 0px #f4eb29);
-            width: 220px; /* Increased size */
-            margin: -5px; /* Negative margin to connect edges */
-            transition: all 0.3s ease;
-            z-index: 1;
-        }
-
-        .hex-wrapper:hover {
-            transform: scale(1.15);
-            z-index: 50;
-            filter: drop-shadow(0px 0px 15px #f4eb29);
-        }
-
-        .hive-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 20px 0;
-        }
-
-        .hex-row { 
-            display: flex; 
-            justify-content: center; 
-            width: 100%;
-        }
-
-        /* Tiling Logic to Lock Edges */
-        .row-2 {
-            margin-top: -55px; /* Pulls middle row up to lock with top */
-            margin-bottom: -55px; /* Pulls bottom row up to lock with middle */
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/mobile.css">
 </head>
 <body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
 

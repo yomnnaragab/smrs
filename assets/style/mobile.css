@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+    .glass-card {
+        padding: 1.5rem;
+        border-left: 8px solid #abe26a;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .hex-wrapper {
+        width: 180px;
+        margin: 0 -10px;
+    }
+    
+    .hex-wrapper.small {
+        width: 160px;
+    }
+
+    .hive-container {
+        flex-direction: column;
+    }
+    
+    .hive-container.column-layout .hex-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hive-container.column-layout .row-2 {
+        margin: 0;
+    }
+    
+    .hex-row {
+        flex-wrap: wrap;
+    }
+    
+    .glow-btn {
+        padding: 1.2rem 1rem;
+    }
+    
+    .btn-text {
+        font-size: 1rem;
+    }
+}
