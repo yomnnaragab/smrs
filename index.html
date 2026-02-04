@@ -7,15 +7,169 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
+    <style>
+        body {
+            background-color: #A8E8F9; 
+            color: #013C58; 
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .font-roca-bold {
+            font-weight: 1000;
+        }
+
+        /* Hexagon Sparkle Styling */
+        .sparkle-container {
+            position: fixed;
+            z-index: 1;
+            pointer-events: none;
+            width: 250px; 
+            height: 250px;
+        }
+
+        .bottom-left { bottom: 0px; left: 0px; }
+        .bottom-right {
+            bottom: 0px; 
+            right: 0px;  
+            transform: scaleX(-1);
+        }
+
+        .title-sparkle {
+            position: absolute;
+            top: 50%;
+            width: 120px;
+            height: 120px;
+            pointer-events: none;
+        }
+
+        .sparkle-left {
+            left: -130px;
+            transform: translateY(-50%);
+        }
+
+        .sparkle-right {
+            right: -130px;
+            transform: translateY(-50%) scaleX(-1);
+        }
+
+        .hex-glitter {
+            stroke-width: 1px;
+            paint-order: stroke;
+        }
+
+        .hex-gold-dark { fill: #F5A201; stroke: #F5A201; } 
+        .hex-gold-mid { fill: #FFBA42; stroke: #FFBA42; } 
+        .hex-blue-mid { fill: #00537A; stroke: #00537A; } 
+
+        .lowercase-s {
+            text-transform: lowercase !important;
+            font-variant: normal !important;
+            font-size: 0.55em; 
+            vertical-align: baseline;
+            display: inline-block;
+            font-weight: 1000; 
+        }
+
+        /* HARD CLEAN Button Styling - Strictly NO Shadows/Filters */
+        .glow-btn {
+            background-color: #FFD35B; 
+            color: #013C58; 
+            border: 4px solid #F5A201; 
+            border-radius: 9999px; 
+            text-align: center;
+            font-family: 'Roca Two', serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.8rem 1.2rem;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 10; 
+
+            /* Force removal of all shadows/glows */
+            box-shadow: none !important;
+            filter: none !important;
+            text-shadow: none !important;
+            outline: none !important;
+            -webkit-filter: none !important;
+        }
+
+        .glow-btn:hover {
+            transform: translateY(-5px);
+            background-color: #F5A201; 
+            box-shadow: none !important;
+        }
+
+        .btn-text {
+            font-size: 1.25rem;
+            line-height: 1.1;
+            color: #013C58;
+        }
+
+        .report-link {
+            color: #013C58; 
+            transition: color 0.3s;
+            position: relative;
+            z-index: 10;
+        }
+
+        .report-link:hover {
+            color: #00537A;
+            text-decoration: underline;
+        }
+
+        .title-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        @media (min-width: 768px) {
+            .title-sparkle { width: 160px; height: 160px; }
+            .sparkle-left { left: -180px; }
+            .sparkle-right { right: -180px; }
+        }
+    </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-8">
 
-    <div class="text-center mb-20">
-        <h1 class="text-7xl md:text-9xl font-roca-bold text-[#231f20] tracking-tighter uppercase">SMRs</h1>
-        <p class="text-xl md:text-3xl font-roca-bold text-[#231f20] mt-4 tracking-widest uppercase">Small Modular Reactors</p>
+    <svg class="sparkle-container bottom-left" viewBox="0 0 120 120">
+        <polygon class="hex-glitter hex-gold-dark" points="30,60 45,68.5 45,85.5 30,94 15,85.5 15,68.5" />
+        <polygon class="hex-glitter hex-gold-mid" points="60,75 70,81 70,92 60,98 50,92 50,81" style="transform: translate(2px, -5px);"/>
+        <polygon class="hex-glitter hex-blue-mid" points="45,45 52,49 52,57 45,61 38,57 38,49" style="transform: translate(12px, 2px);"/>
+    </svg>
+
+    <svg class="sparkle-container bottom-right" viewBox="0 0 120 120">
+        <polygon class="hex-glitter hex-gold-dark" points="30,60 45,68.5 45,85.5 30,94 15,85.5 15,68.5" />
+        <polygon class="hex-glitter hex-gold-mid" points="60,75 70,81 70,92 60,98 50,92 50,81" style="transform: translate(2px, -5px);"/>
+        <polygon class="hex-glitter hex-blue-mid" points="45,45 52,49 52,57 45,61 38,57 38,49" style="transform: translate(12px, 2px);"/>
+    </svg>
+
+    <div class="text-center mb-16">
+        <div class="title-wrapper">
+            <svg class="title-sparkle sparkle-left" viewBox="0 0 120 120">
+                <polygon class="hex-glitter hex-gold-dark" points="30,60 45,68.5 45,85.5 30,94 15,85.5 15,68.5" style="transform: translate(0px, -15px);"/>
+                <polygon class="hex-glitter hex-gold-mid" points="60,75 70,81 70,92 60,98 50,92 50,81" style="transform: translate(2px, -5px);"/>
+                <polygon class="hex-glitter hex-blue-mid" points="45,45 52,49 52,57 45,61 38,57 38,49" style="transform: translate(12px, 2px);"/>
+            </svg>
+
+            <h1 class="text-7xl md:text-9xl font-roca-bold text-[#013C58] tracking-tighter">
+                <span class="uppercase">SMR</span><span class="lowercase-s">s</span>
+            </h1>
+
+            <svg class="title-sparkle sparkle-right" viewBox="0 0 120 120">
+                <polygon class="hex-glitter hex-gold-dark" points="30,60 45,68.5 45,85.5 30,94 15,85.5 15,68.5" style="transform: translate(0px, -15px);"/>
+                <polygon class="hex-glitter hex-gold-mid" points="60,75 70,81 70,92 60,98 50,92 50,81" style="transform: translate(2px, -5px);"/>
+                <polygon class="hex-glitter hex-blue-mid" points="45,45 52,49 52,57 45,61 38,57 38,49" style="transform: translate(12px, 2px);"/>
+            </svg>
+        </div>
+        <p class="text-xl md:text-3xl font-roca-bold text-[#013C58] mt-4 tracking-widest uppercase">Small Modular Reactors</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-6xl">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
         <a href="pages/introduction.html" class="glow-btn">
             <span class="btn-text">Introduction</span>
         </a>
@@ -28,22 +182,16 @@
         <a href="pages/operation.html" class="glow-btn">
             <span class="btn-text">Operation<br>Lifecycle</span>
         </a>
-        <a href="pages/operating-smrs.html" class="glow-btn">
-            <span class="btn-text">Current Operating<br>SMRs</span>
-        </a>
         <a href="pages/case-studies.html" class="glow-btn">
             <span class="btn-text">Case Studies</span>
         </a>
-    </div>
-
-    <div class="mt-12 w-full max-w-xs">
         <a href="assets/pdfs/poster.pdf" target="_blank" class="glow-btn">
             <span class="btn-text">Project Poster</span>
         </a>
     </div>
 
     <div class="mt-20">
-        <a href="assets/pdfs/main.pdf" target="_blank" class="text-2xl md:text-4xl font-roca-bold text-[#231f20] hover:text-black hover:underline transition duration-300 uppercase opacity-90 hover:opacity-100">
+        <a href="assets/pdfs/main.pdf" target="_blank" class="text-2xl md:text-4xl font-roca-bold report-link uppercase">
             Access Full Report
         </a>
     </div>

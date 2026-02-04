@@ -7,17 +7,98 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/mobile.css">
+    <style>
+        body {
+            background-color: #A8E8F9; 
+            color: #013C58; 
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .font-roca-bold { font-weight: 1000; }
+
+        /* Back Home Button */
+        .nav-btn {
+            background-color: #FFD35B; 
+            color: #013C58; 
+            border: 4px solid #F5A201;
+            border-radius: 9999px; 
+            text-align: center;
+            font-family: 'Roca Two', serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 2rem;
+            position: relative;
+            z-index: 20; 
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            background-color: #F5A201; 
+        }
+
+        /* Content Card */
+        .content-card {
+            background-color: #FFD35B; 
+            border: 6px solid #F5A201; 
+            position: relative;
+            z-index: 10;
+        }
+
+        /* S-M-R Info Hexagons */
+        .info-hex-grid {
+            display: flex;
+            justify-content: center;
+            gap: -15px; 
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .hex-border-wrapper {
+            filter: drop-shadow(4px 0 0 #013C58) 
+                    drop-shadow(-4px 0 0 #013C58) 
+                    drop-shadow(0 4px 0 #013C58) 
+                    drop-shadow(0 -4px 0 #013C58);
+            transition: transform 0.3s ease;
+            margin: 5px; 
+        }
+
+        .info-hex {
+            color: #013C58;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            padding: 2.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 260px;
+            min-height: 230px;
+        }
+
+        .hex-border-wrapper:hover { 
+            transform: scale(1.05);
+            z-index: 30;
+        }
+
+        .bg-small { background-color: #F5A201; }
+        .bg-modular { background-color: #FFBA42; }
+        .bg-reactor { background-color: #FFD35B; }
+
+    </style>
 </head>
 <body class="min-h-screen p-8 md:p-12 flex flex-col items-center">
 
     <div class="w-full max-w-5xl flex justify-start mb-12">
-        <a href="../index.html" class="nav-btn">
-            ← Back Home
-        </a>
+        <a href="../index.html" class="nav-btn">← Back Home</a>
     </div>
 
-    <div class="w-full max-w-5xl bg-[#ffe373] border-[10px] border-[#abe26a] rounded-[3rem] p-8 md:p-12 shadow-xl text-center">
-        <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 inline-block">
+    <div class="w-full max-w-5xl content-card rounded-[3rem] p-8 md:p-12 text-center">
+        <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-4 border-[#013C58] pb-4 inline-block">
             Introduction
         </h2>
 
@@ -35,23 +116,23 @@
             </p>
 
             <div class="pt-10">
-                <div class="hive-container">
-                    <div class="hex-wrapper">
-                        <div class="hexagon-shape">
-                            <span class="hex-title font-roca-bold">Small</span>
-                            <p class="hex-text">Typically generates less than 300 MWe for remote grids.</p>
+                <div class="info-hex-grid">
+                    <div class="hex-border-wrapper">
+                        <div class="info-hex bg-small">
+                            <span class="text-2xl font-roca-bold uppercase mb-2">Small</span>
+                            <p class="text-sm leading-tight">Typically generates less than 300 MWe for remote grids.</p>
                         </div>
                     </div>
-                    <div class="hex-wrapper">
-                        <div class="hexagon-shape">
-                            <span class="hex-title font-roca-bold">Modular</span>
-                            <p class="hex-text">Factory-fabricated and transportable components.</p>
+                    <div class="hex-border-wrapper">
+                        <div class="info-hex bg-modular">
+                            <span class="text-2xl font-roca-bold uppercase mb-2">Modular</span>
+                            <p class="text-sm leading-tight">Factory-fabricated and transportable components.</p>
                         </div>
                     </div>
-                    <div class="hex-wrapper">
-                        <div class="hexagon-shape">
-                            <span class="hex-title font-roca-bold">Reactor</span>
-                            <p class="hex-text">Fission-based power with innovative safety.</p>
+                    <div class="hex-border-wrapper">
+                        <div class="info-hex bg-reactor">
+                            <span class="text-2xl font-roca-bold uppercase mb-2">Reactor</span>
+                            <p class="text-sm leading-tight">Fission-based power with innovative safety.</p>
                         </div>
                     </div>
                 </div>
@@ -59,11 +140,10 @@
         </div>
     </div>
 
-    <div class="mt-12 opacity-80 text-center">
+    <div class="mt-12 opacity-80 text-center relative z-20">
         <p class="font-roca-bold uppercase tracking-[0.3em] text-sm">Nuclear and Radiation Engineering Department • Alexandria University</p>
     </div>
 
     <script src="../assets/js/navigation.js"></script>
-
 </body>
 </html>

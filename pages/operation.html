@@ -8,26 +8,85 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/mobile.css">
     <link rel="stylesheet" href="../assets/css/tabs.css">
+    <style>
+        body {
+            background-color: #A8E8F9; 
+            color: #013C58; 
+            overflow-x: hidden;
+        }
+
+        .font-roca-bold { font-weight: 1000; }
+
+        /* Back Home Button */
+        .nav-btn {
+            background-color: #FFD35B; 
+            color: #013C58; 
+            border: 4px solid #F5A201;
+            border-radius: 9999px; 
+            text-align: center;
+            font-family: 'Roca Two', serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 2rem;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            background-color: #F5A201; 
+        }
+
+        /* Tab Navigation Buttons */
+        .tab-btn {
+            background-color: #FFD35B;
+            color: #013C58;
+            border: 3px solid #F5A201;
+            padding: 0.75rem 1.25rem;
+            border-radius: 1rem;
+            font-family: 'Roca Two', serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background-color: #F5A201;
+            border-color: #013C58;
+            color: #013C58;
+        }
+
+        /* Main Content Card */
+        .tab-content {
+            background-color: #FFD35B; 
+            border: 6px solid #F5A201; 
+            color: #013C58;
+        }
+
+        .tab-header-line {
+            border-bottom: 2px solid #013C58;
+        }
+    </style>
 </head>
 <body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
 
     <div class="w-full max-w-5xl flex justify-start mb-8">
         <a href="../index.html" class="nav-btn">
-            ← Back to Home
+            ← Back Home
         </a>
     </div>
 
-    <!-- Page Title -->
     <div class="text-center mb-10">
-        <h1 class="text-5xl md:text-7xl font-roca-bold text-[#231f20] tracking-tighter uppercase mb-4">Operation</h1>
-        <p class="text-xl md:text-2xl font-roca-bold text-[#231f20] tracking-wide uppercase opacity-80">
+        <h1 class="text-5xl md:text-7xl font-roca-bold text-[#013C58] tracking-tighter uppercase mb-4">Operation</h1>
+        <p class="text-xl md:text-2xl font-roca-bold text-[#013C58] tracking-wide uppercase opacity-80">
             Lifecycle & Safety Systems
         </p>
     </div>
 
     <div class="tab-container w-full max-w-6xl">
-        <!-- Tab Navigation -->
-        <div class="tab-nav">
+        <div class="tab-nav flex flex-wrap justify-center gap-3 mb-8">
             <button class="tab-btn active" data-tab="licensing">Licensing</button>
             <button class="tab-btn" data-tab="startup">Startup</button>
             <button class="tab-btn" data-tab="normal">Normal Operation</button>
@@ -35,12 +94,10 @@
             <button class="tab-btn" data-tab="removal">Decommissioning</button>
         </div>
 
-        <!-- Tab Content Wrapper -->
-        <div class="tab-content w-full content-card p-8 md:p-12 shadow-xl bg-[#fffef5]">
+        <div class="tab-content w-full rounded-[3rem] p-8 md:p-12 shadow-2xl">
             
-            <!-- Tab 1: Licensing -->
             <div id="licensing" class="tab-pane active">
-                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 tab-header-line pb-4 text-center">
                     Licensing & Commissioning
                 </h2>
 
@@ -55,9 +112,8 @@
                 </div>
             </div>
 
-            <!-- Tab 2: Startup -->
             <div id="startup" class="tab-pane">
-                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 tab-header-line pb-4 text-center">
                     Startup & Power Ascension
                 </h2>
 
@@ -72,9 +128,8 @@
                 </div>
             </div>
 
-            <!-- Tab 3: Normal Operation -->
             <div id="normal" class="tab-pane">
-                <div class="text-center mb-8 border-b-2 border-[#231f20] pb-4">
+                <div class="text-center mb-8 tab-header-line pb-4">
                     <h2 class="text-3xl md:text-5xl font-roca-bold uppercase">
                         Normal Operation &
                     </h2>
@@ -94,9 +149,8 @@
                 </div>
             </div>
 
-            <!-- Tab 4: Safety Systems -->
             <div id="safety" class="tab-pane">
-                <div class="text-center mb-8 border-b-2 border-[#231f20] pb-4">
+                <div class="text-center mb-8 tab-header-line pb-4">
                     <h2 class="text-3xl md:text-5xl font-roca-bold uppercase">
                         Safety Systems:
                     </h2>
@@ -116,9 +170,8 @@
                 </div>
             </div>
 
-            <!-- Tab 5: Decommissioning -->
             <div id="removal" class="tab-pane">
-                <div class="text-center mb-8 border-b-2 border-[#231f20] pb-4">
+                <div class="text-center mb-8 tab-header-line pb-4">
                     <h2 class="text-3xl md:text-5xl font-roca-bold uppercase">
                         Decommissioning &
                     </h2>

@@ -8,26 +8,97 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/mobile.css">
     <link rel="stylesheet" href="../assets/css/tabs.css">
+    <style>
+        body {
+            background-color: #A8E8F9; 
+            color: #013C58; 
+            overflow-x: hidden;
+        }
+
+        .font-roca-bold { font-weight: 1000; }
+
+        /* Back Home Button */
+        .nav-btn {
+            background-color: #FFD35B; 
+            color: #013C58; 
+            border: 4px solid #F5A201;
+            border-radius: 9999px; 
+            text-align: center;
+            font-family: 'Roca Two', serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 2rem;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            background-color: #F5A201; 
+        }
+
+        /* Tab Navigation Buttons */
+        .tab-btn {
+            background-color: #FFD35B;
+            color: #013C58;
+            border: 3px solid #F5A201;
+            padding: 0.75rem 1.25rem;
+            border-radius: 1rem;
+            font-family: 'Roca Two', serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background-color: #F5A201;
+            border-color: #013C58;
+            color: #013C58;
+        }
+
+        /* Main Content Card */
+        .tab-content {
+            background-color: #FFD35B; 
+            border: 6px solid #F5A201; 
+            color: #013C58;
+        }
+
+        /* Decorative Image Containers */
+        .img-accent-box {
+            background-color: rgba(1, 60, 88, 0.1); /* Subtle dark blue tint */
+            padding: 1rem;
+            border-radius: 2.5rem;
+            border: 4px solid #013C58;
+        }
+
+        .tab-header-line {
+            border-bottom: 2px solid #013C58;
+        }
+
+        .caption-text {
+            color: rgba(1, 60, 88, 0.8);
+        }
+    </style>
 </head>
 <body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
 
     <div class="w-full max-w-5xl flex justify-start mb-8">
         <a href="../index.html" class="nav-btn">
-            ← Back to Home
+            ← Back Home
         </a>
     </div>
 
-    <!-- Page Title -->
     <div class="text-center mb-10">
-        <h1 class="text-5xl md:text-7xl font-roca-bold text-[#231f20] tracking-tighter uppercase mb-4">Manufacturing</h1>
-        <p class="text-xl md:text-2xl font-roca-bold text-[#231f20] tracking-wide uppercase opacity-80">
+        <h1 class="text-5xl md:text-7xl font-roca-bold text-[#013C58] tracking-tighter uppercase mb-4">Manufacturing</h1>
+        <p class="text-xl md:text-2xl font-roca-bold text-[#013C58] tracking-wide uppercase opacity-80">
             Key Components & Fabrication
         </p>
     </div>
 
     <div class="tab-container w-full max-w-6xl">
-        <!-- Tab Navigation -->
-        <div class="tab-nav">
+        <div class="tab-nav flex flex-wrap justify-center gap-3 mb-8">
             <button class="tab-btn active" data-tab="fuel">Reactor Core & Fuel</button>
             <button class="tab-btn" data-tab="rpv">Pressure Vessel</button>
             <button class="tab-btn" data-tab="rods">Control Rods</button>
@@ -35,12 +106,10 @@
             <button class="tab-btn" data-tab="ic">I&C Systems</button>
         </div>
 
-        <!-- Tab Content Wrapper -->
-        <div class="tab-content w-full content-card p-8 md:p-12 shadow-xl bg-[#fffef5]">
+        <div class="tab-content w-full rounded-[3rem] p-8 md:p-12 shadow-2xl">
             
-            <!-- Tab 1: Reactor Core & Fuel -->
             <div id="fuel" class="tab-pane active">
-                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 tab-header-line pb-4 text-center">
                     Reactor Core & Nuclear Fuel
                 </h2>
 
@@ -55,18 +124,17 @@
                 </div>
 
                 <div class="mt-12 w-full flex justify-center">
-                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full">
-                        <img src="../assets/images/triso.png" alt="TRISO Fuel Particle" class="w-full h-auto rounded-[1.8rem] shadow-md">
-                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center text-[#231f20]/70 text-sm">
+                    <div class="img-accent-box max-w-3xl w-full">
+                        <img src="../assets/images/triso.png" alt="TRISO Fuel Particle" class="w-full h-auto rounded-[1.8rem]">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center caption-text text-sm">
                             TRISO Fuel particle - US DEPARTMENT OF ENERGY
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 2: Reactor Pressure Vessel -->
             <div id="rpv" class="tab-pane">
-                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 tab-header-line pb-4 text-center">
                     The Reactor Pressure Vessel (RPV)
                 </h2>
 
@@ -81,18 +149,17 @@
                 </div>
 
                 <div class="mt-12 w-full flex justify-center">
-                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full">
-                        <img src="../assets/images/pv.jpg" alt="Small Reactor Pressure Vessel" class="w-full h-auto rounded-[1.8rem] shadow-md">
-                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center text-[#231f20]/70 text-sm">
+                    <div class="img-accent-box max-w-3xl w-full">
+                        <img src="../assets/images/pv.jpg" alt="Small Reactor Pressure Vessel" class="w-full h-auto rounded-[1.8rem]">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center caption-text text-sm">
                             Small Reactor Pressure Vessel
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 3: Control Rods -->
             <div id="rods" class="tab-pane">
-                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 tab-header-line pb-4 text-center">
                     Control Rods
                 </h2>
 
@@ -107,18 +174,17 @@
                 </div>
 
                 <div class="mt-12 w-full flex justify-center">
-                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full">
-                        <img src="../assets/images/cr.avif" alt="Small Reactor Control Rods" class="w-full h-auto rounded-[1.8rem] shadow-md">
-                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center text-[#231f20]/70 text-sm">
+                    <div class="img-accent-box max-w-3xl w-full">
+                        <img src="../assets/images/cr.avif" alt="Small Reactor Control Rods" class="w-full h-auto rounded-[1.8rem]">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center caption-text text-sm">
                             Small Reactor Control Rods - NS ENERGY
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 4: Steam Generators -->
             <div id="steam" class="tab-pane">
-                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 tab-header-line pb-4 text-center">
                     Steam Generators 
                 </h2>
 
@@ -133,18 +199,17 @@
                 </div>
 
                 <div class="mt-12 w-full flex justify-center">
-                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full">
-                        <img src="../assets/images/sg.avif" alt="SMR Steam Generators" class="w-full h-auto rounded-[1.8rem] shadow-md">
-                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center text-[#231f20]/70 text-sm">
+                    <div class="img-accent-box max-w-3xl w-full">
+                        <img src="../assets/images/sg.avif" alt="SMR Steam Generators" class="w-full h-auto rounded-[1.8rem]">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-center caption-text text-sm">
                             Steam Generator - Rolls Royce
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 5: I&C Systems -->
             <div id="ic" class="tab-pane">
-                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 border-b-2 border-[#231f20] pb-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-roca-bold uppercase mb-8 tab-header-line pb-4 text-center">
                     Instrumentation & Control Systems
                 </h2>
 
@@ -159,12 +224,12 @@
                 </div>
 
                 <div class="mt-12 w-full flex justify-center">
-                    <div class="bg-[#abe26a]/20 p-4 rounded-[2.5rem] border-4 border-[#abe26a] shadow-inner max-w-3xl w-full text-center">
-                        <img src="../assets/images/ic.png" alt="Digital Control Module Interface" class="w-full h-auto rounded-[1.8rem] shadow-md">
-                        <p class="mt-4 font-roca-bold uppercase tracking-widest text-[#231f20]/70 text-sm">
+                    <div class="img-accent-box max-w-3xl w-full text-center">
+                        <img src="../assets/images/ic.png" alt="Digital Control Module Interface" class="w-full h-auto rounded-[1.8rem]">
+                        <p class="mt-4 font-roca-bold uppercase tracking-widest caption-text text-sm">
                             Cyber Security in Nuclear Power Plants: Insights for Advanced Nuclear Technologies
                         </p>
-                        <p class="mt-1 font-sans text-xs text-[#231f20]/60 italic">
+                        <p class="mt-1 font-sans text-xs caption-text italic opacity-70">
                             Poresky, C., Andreades, C., Kendrick, J., & Peterson, P. (2017). University of California, Berkeley.
                         </p>
                     </div>

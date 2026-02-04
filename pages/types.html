@@ -8,39 +8,140 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/mobile.css">
     <link rel="stylesheet" href="../assets/css/tabs.css">
+    <style>
+        body {
+            background-color: #A8E8F9; 
+            color: #013C58; 
+            overflow-x: hidden;
+        }
+
+        .font-roca-bold { font-weight: 1000; }
+
+        /* Back Home Button */
+        .nav-btn {
+            background-color: #FFD35B; 
+            color: #013C58; 
+            border: 4px solid #F5A201;
+            border-radius: 9999px; 
+            text-align: center;
+            font-family: 'Roca Two', serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 2rem;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            background-color: #F5A201; 
+        }
+
+        /* Tab Navigation */
+        .tab-btn {
+            background-color: #FFD35B;
+            color: #013C58;
+            border: 3px solid #F5A201;
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Roca Two', serif;
+            font-weight: 1000;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background-color: #F5A201;
+            border-color: #013C58;
+            color: #013C58;
+        }
+
+        /* Tab Content Wrapper */
+        .tab-content {
+            background-color: #FFD35B; 
+            border: 6px solid #F5A201; 
+            color: #013C58;
+        }
+
+        .glass-card {
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 2px solid #F5A201;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        .section-title {
+            color: #013C58;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #013C58;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        /* Image Borders */
+        .img-container {
+            background-color: #F5A201;
+            padding: 1rem;
+            border-radius: 3rem;
+            border: 8px solid #013C58;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        th {
+            background-color: #013C58;
+            color: #A8E8F9;
+            padding: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        td {
+            border-bottom: 1px solid #F5A201;
+            padding: 0.75rem;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(245, 162, 1, 0.1);
+        }
+
+        /* Technical Property Table Colors */
+        .tech-table th { background-color: #F5A201; color: #013C58; }
+    </style>
 </head>
 <body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
 
     <div class="w-full max-w-5xl flex justify-start mb-8">
-        <a href="../index.html" class="nav-btn">
-            ← Back to Home
-        </a>
+        <a href="../index.html" class="nav-btn">← Back Home</a>
     </div>
 
-    <!-- Page Title -->
     <div class="text-center mb-10">
-        <h1 class="text-5xl md:text-7xl font-roca-bold text-[#231f20] tracking-tighter uppercase mb-4">Reactor Types</h1>
-        <p class="text-xl md:text-2xl font-roca-bold text-[#231f20] tracking-wide uppercase opacity-80">
+        <h1 class="text-5xl md:text-7xl font-roca-bold text-[#013C58] tracking-tighter uppercase mb-4">Reactor Types</h1>
+        <p class="text-xl md:text-2xl font-roca-bold text-[#013C58] tracking-wide uppercase opacity-80">
             Coolants & Technologies
         </p>
     </div>
 
     <div class="tab-container w-full max-w-7xl">
-        <!-- Tab Navigation -->
-        <div class="tab-nav">
+        <div class="tab-nav flex flex-wrap justify-center gap-4 mb-8">
             <button class="tab-btn active" data-tab="water">Water-Cooled</button>
             <button class="tab-btn" data-tab="gas">Gas-Cooled (HTGR)</button>
             <button class="tab-btn" data-tab="metal">Liquid Metal</button>
             <button class="tab-btn" data-tab="salt">Molten Salt</button>
         </div>
 
-        <!-- Tab Content Wrapper -->
-        <div class="tab-content w-full bg-[#faedd4]/50 rounded-3xl p-4 md:p-8">
+        <div class="tab-content w-full rounded-[3rem] p-4 md:p-8 shadow-2xl">
             
-            <!-- Tab 1: Water-Cooled -->
             <div id="water" class="tab-pane active">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#231f20]">Water-Cooled SMRs</h2>
+                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#013C58]">Water-Cooled SMRs</h2>
                     <p class="text-xl mt-4 font-roca-bold opacity-70">Established light-water technology maintained in compact, integral designs.</p>
                 </div>
 
@@ -80,17 +181,16 @@
                 </div>
 
                 <div class="w-full flex justify-center mb-16">
-                    <div class="bg-[#ffe373] p-4 rounded-[3rem] border-[10px] border-[#abe26a] shadow-xl max-w-4xl">
+                    <div class="img-container max-w-4xl shadow-xl">
                         <img src="../assets/images/wcr.jpg" alt="Water Cooled Reactor Diagram" class="w-full h-auto rounded-[2rem]">
                     </div>
                 </div>
 
-                <!-- Technical Analysis -->
                 <section class="glass-card mb-12">
                     <h2 class="section-title font-roca-bold">Technical Analysis</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-                        <div class="p-6 rounded-2xl border-l-8 border-green-500 bg-white/50">
-                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-800">Advantages</h3>
+                        <div class="p-6 rounded-2xl border-l-8 border-green-600 bg-white/40">
+                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-900">Advantages</h3>
                             <ul class="list-disc ml-5 space-y-2 text-lg">
                                 <li>Enhanced Passive Safety systems.</li>
                                 <li>Modular Construction & Scalability.</li>
@@ -99,8 +199,8 @@
                                 <li>Long Refueling Intervals (up to 5 years).</li>
                             </ul>
                         </div>
-                        <div class="p-6 rounded-2xl border-l-8 border-red-500 bg-white/50">
-                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-800">Disadvantages</h3>
+                        <div class="p-6 rounded-2xl border-l-8 border-red-600 bg-white/40">
+                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-900">Disadvantages</h3>
                             <ul class="list-disc ml-5 space-y-2 text-lg">
                                 <li>Higher Specific Capital Cost ($/MWe).</li>
                                 <li>Limited Power Output per module.</li>
@@ -112,13 +212,12 @@
                     </div>
                 </section>
 
-                <!-- Technical Specs Table -->
-                <div class="w-full content-card p-6 md:p-10 shadow-lg mb-8">
-                    <h3 class="text-2xl md:text-3xl font-roca-bold uppercase mb-6 text-center border-b-2 border-[#231f20] pb-2">Global Development Status</h3>
-                    <div class="rounded-table-container overflow-x-auto">
+                <div class="w-full glass-card p-6 md:p-10 shadow-lg mb-8">
+                    <h3 class="text-2xl md:text-3xl font-roca-bold uppercase mb-6 text-center border-b-2 border-[#013C58] pb-2">Global Development Status</h3>
+                    <div class="overflow-x-auto rounded-xl">
                         <table>
                             <thead>
-                                <tr class="text-sm md:text-base">
+                                <tr>
                                     <th>Design</th>
                                     <th>Output (MWe)</th>
                                     <th>Type</th>
@@ -127,7 +226,7 @@
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-xs md:text-sm font-roca-bold">
+                            <tbody class="font-roca-bold">
                                 <tr><td>ACP 100</td><td>125</td><td>PWR</td><td>CNNC</td><td>China</td><td>Under construction</td></tr>
                                 <tr><td>AP300</td><td>330</td><td>PWR</td><td>Westinghouse Electric Co.</td><td>USA</td><td>Basic design</td></tr>
                                 <tr><td>CAREM</td><td>30</td><td>PWR</td><td>CNEA</td><td>Argentina</td><td>Under construction</td></tr>
@@ -144,10 +243,9 @@
                 </div>
             </div>
 
-            <!-- Tab 2: Gas-Cooled -->
             <div id="gas" class="tab-pane">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#231f20]">Gas-Cooled SMRs</h2>
+                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#013C58]">Gas-Cooled SMRs</h2>
                     <p class="text-xl mt-4 font-roca-bold opacity-70">High-temperature helium cooling with TRISO fuel for efficient process heat.</p>
                 </div>
 
@@ -186,17 +284,16 @@
                 </div>
 
                 <div class="w-full flex justify-center mb-16">
-                    <div class="bg-[#ffe373] p-4 rounded-[3rem] border-[10px] border-[#abe26a] shadow-xl max-w-4xl">
+                    <div class="img-container max-w-4xl shadow-xl">
                         <img src="../assets/images/gcr.png" alt="Gas Cooled Reactor Diagram" class="w-full h-auto rounded-[2rem]">
                     </div>
                 </div>
 
-                <!-- Technical Analysis -->
                 <section class="glass-card mb-12">
                     <h2 class="section-title font-roca-bold">Technical Analysis</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-                        <div class="p-6 rounded-2xl border-l-8 border-green-500 bg-white/50">
-                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-800">Advantages</h3>
+                        <div class="p-6 rounded-2xl border-l-8 border-green-600 bg-white/40">
+                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-900">Advantages</h3>
                             <ul class="list-disc ml-5 space-y-2 text-lg">
                                 <li><strong>Process Heat:</strong> High outlet temperatures support hydrogen production.</li>
                                 <li><strong>Strong Passive Safety:</strong> Relies on physics rather than engineered systems.</li>
@@ -204,8 +301,8 @@
                                 <li><strong>Encapsulated Waste:</strong> TRISO layers serve as a primary barrier against leaks.</li>
                             </ul>
                         </div>
-                        <div class="p-6 rounded-2xl border-l-8 border-red-500 bg-white/50">
-                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-800">Disadvantages</h3>
+                        <div class="p-6 rounded-2xl border-l-8 border-red-600 bg-white/40">
+                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-900">Disadvantages</h3>
                             <ul class="list-disc ml-5 space-y-2 text-lg">
                                 <li><strong>Graphite Aging:</strong> Irradiation causes dimensional/thermal property changes.</li>
                                 <li><strong>Fuel Cost:</strong> Complex TRISO manufacturing is currently expensive.</li>
@@ -216,13 +313,12 @@
                     </div>
                 </section>
 
-                <!-- Technical Specs Table -->
-                <div class="w-full content-card p-6 md:p-10 shadow-lg mb-8">
-                    <h3 class="text-2xl md:text-3xl font-roca-bold uppercase mb-6 text-center border-b-2 border-[#231f20] pb-2">Global Development Status</h3>
-                    <div class="rounded-table-container overflow-x-auto">
+                <div class="w-full glass-card p-6 md:p-10 shadow-lg mb-8">
+                    <h3 class="text-2xl md:text-3xl font-roca-bold uppercase mb-6 text-center border-b-2 border-[#013C58] pb-2">Global Development Status</h3>
+                    <div class="overflow-x-auto rounded-xl">
                         <table>
                             <thead>
-                                <tr class="text-sm md:text-base">
+                                <tr>
                                     <th>Design</th>
                                     <th>Output (MWe)</th>
                                     <th>Type</th>
@@ -231,7 +327,7 @@
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-xs md:text-sm font-roca-bold">
+                            <tbody class="font-roca-bold">
                                 <tr><td>EM2</td><td>265</td><td>HTGR</td><td>General Atomics</td><td>USA</td><td>Detailed Design</td></tr>
                                 <tr><td>GTHTR300</td><td>300</td><td>HTGR</td><td>JAEA</td><td>Japan</td><td>Basic Design</td></tr>
                                 <tr><td>HTR-PM</td><td>210</td><td>HTGR</td><td>INET, Tsinghua University</td><td>China</td><td>In Operation</td></tr>
@@ -242,10 +338,9 @@
                 </div>
             </div>
 
-            <!-- Tab 3: Liquid Metal -->
             <div id="metal" class="tab-pane">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#231f20]">Liquid Metal SMRs</h2>
+                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#013C58]">Liquid Metal SMRs</h2>
                     <p class="text-xl mt-4 font-roca-bold opacity-70">Highly efficient fast reactors using Sodium, Lead, or LBE coolants.</p>
                 </div>
 
@@ -265,21 +360,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Melting Pt</td>
-                                        <td>97.8°C</td>
-                                        <td>327.5°C</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Boiling Pt</td>
-                                        <td>883°C</td>
-                                        <td>1749°C</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Notes</td>
-                                        <td>Highly reactive</td>
-                                        <td>Radiation shielding</td>
-                                    </tr>
+                                    <tr><td>Melting Pt</td><td>97.8°C</td><td>327.5°C</td></tr>
+                                    <tr><td>Boiling Pt</td><td>883°C</td><td>1749°C</td></tr>
+                                    <tr><td>Notes</td><td>Highly reactive</td><td>Radiation shielding</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -312,17 +395,16 @@
                 </div>
 
                 <div class="w-full flex justify-center mb-16">
-                    <div class="bg-[#ffe373] p-4 rounded-[3rem] border-[10px] border-[#abe26a] shadow-xl max-w-4xl">
+                    <div class="img-container max-w-4xl shadow-xl">
                         <img src="../assets/images/lmr.png" alt="Liquid Metal Reactor Diagram" class="w-full h-auto rounded-[2rem]">
                     </div>
                 </div>
 
-                <!-- Technical Analysis -->
                 <section class="glass-card mb-12">
                     <h2 class="section-title font-roca-bold">Technical Analysis</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-                        <div class="p-6 rounded-2xl border-l-8 border-green-500 bg-white/50">
-                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-800">Advantages</h3>
+                        <div class="p-6 rounded-2xl border-l-8 border-green-600 bg-white/40">
+                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-900">Advantages</h3>
                             <ul class="list-disc ml-5 space-y-2 text-lg">
                                 <li><strong>High Power Density:</strong> Up to 100 MW/m³ for compact, transportable units.</li>
                                 <li><strong>Sustainability:</strong> Breeding ratios of 1.1–1.2 produce additional fissile material.</li>
@@ -330,8 +412,8 @@
                                 <li><strong>Long Life:</strong> Refueling intervals of 3–5 years reduce maintenance downtime.</li>
                             </ul>
                         </div>
-                        <div class="p-6 rounded-2xl border-l-8 border-red-500 bg-white/50">
-                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-800">Disadvantages</h3>
+                        <div class="p-6 rounded-2xl border-l-8 border-red-600 bg-white/40">
+                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-900">Disadvantages</h3>
                             <ul class="list-disc ml-5 space-y-2 text-lg">
                                 <li><strong>Corrosion:</strong> Selective leaching and grain-boundary penetration of materials.</li>
                                 <li><strong>Toxicity:</strong> LBE produces Polonium-210, requiring strict radiological protection.</li>
@@ -342,13 +424,12 @@
                     </div>
                 </section>
 
-                <!-- Technical Specs Table -->
-                <div class="w-full content-card p-6 md:p-10 shadow-lg mb-8">
-                    <h3 class="text-2xl md:text-3xl font-roca-bold uppercase mb-6 text-center border-b-2 border-[#231f20] pb-2">Global Development Status</h3>
-                    <div class="rounded-table-container overflow-x-auto">
+                <div class="w-full glass-card p-6 md:p-10 shadow-lg mb-8">
+                    <h3 class="text-2xl md:text-3xl font-roca-bold uppercase mb-6 text-center border-b-2 border-[#013C58] pb-2">Global Development Status</h3>
+                    <div class="overflow-x-auto rounded-xl">
                         <table>
                             <thead>
-                                <tr class="text-sm md:text-base">
+                                <tr>
                                     <th>Design</th>
                                     <th>Output (MWe)</th>
                                     <th>Type</th>
@@ -357,7 +438,7 @@
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-xs md:text-sm font-roca-bold">
+                            <tbody class="font-roca-bold">
                                 <tr><td>ARC-100</td><td>100</td><td>Sodium-cooled</td><td>ARC Nuclear Canada, Inc.</td><td>Canada</td><td>Conceptual design</td></tr>
                                 <tr><td>Blue Capsule</td><td>50</td><td>Sodium-cooled</td><td>Blue Capsule Technology</td><td>France</td><td>Conceptual design</td></tr>
                                 <tr><td>BREST-OD-300</td><td>300</td><td>Lead-cooled</td><td>NIKIET</td><td>Russian Federation</td><td>Under construction</td></tr>
@@ -373,10 +454,9 @@
                 </div>
             </div>
 
-            <!-- Tab 4: Molten Salt -->
             <div id="salt" class="tab-pane">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#231f20]">Molten Salt SMRs</h2>
+                    <h2 class="text-4xl md:text-6xl font-roca-bold uppercase text-[#013C58]">Molten Salt SMRs</h2>
                     <p class="text-xl mt-4 font-roca-bold opacity-70">Innovative designs using molten salts as coolant and potentially fuel medium.</p>
                 </div>
 
@@ -415,17 +495,16 @@
                 </div>
 
                 <div class="w-full flex justify-center mb-16">
-                    <div class="bg-[#ffe373] p-4 rounded-[3rem] border-[10px] border-[#abe26a] shadow-xl max-w-4xl">
+                    <div class="img-container max-w-4xl shadow-xl">
                         <img src="../assets/images/msr.png" alt="Molten Salt Reactor Diagram" class="w-full h-auto rounded-[2rem]">
                     </div>
                 </div>
 
-                <!-- Technical Analysis -->
                 <section class="glass-card mb-12">
                     <h2 class="section-title font-roca-bold">Technical Analysis</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-                        <div class="p-6 rounded-2xl border-l-8 border-green-500 bg-white/50">
-                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-800">Advantages</h3>
+                        <div class="p-6 rounded-2xl border-l-8 border-green-600 bg-white/40">
+                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-green-900">Advantages</h3>
                             <ul class="list-disc ml-5 space-y-2 text-lg">
                                 <li><strong>High Efficiency:</strong> Can exceed 50% thermal efficiency.</li>
                                 <li><strong>Non-Flammable:</strong> No risk of hydrogen explosions or sodium fires.</li>
@@ -434,8 +513,8 @@
                                 <li><strong>Compact/Modular:</strong> Core volume is used efficiently for decentralized power.</li>
                             </ul>
                         </div>
-                        <div class="p-6 rounded-2xl border-l-8 border-red-500 bg-white/50">
-                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-800">Disadvantages</h3>
+                        <div class="p-6 rounded-2xl border-l-8 border-red-600 bg-white/40">
+                            <h3 class="text-2xl font-roca-bold uppercase mb-4 text-red-900">Disadvantages</h3>
                             <ul class="list-disc ml-5 space-y-2 text-lg">
                                 <li><strong>Material Corrosion:</strong> High temperatures increase structural degradation.</li>
                                 <li><strong>Tritium Management:</strong> Requires specialized containment systems.</li>
@@ -447,13 +526,12 @@
                     </div>
                 </section>
 
-                <!-- Technical Specs Table -->
-                <div class="w-full content-card p-6 md:p-10 shadow-lg mb-8">
-                    <h3 class="text-2xl md:text-3xl font-roca-bold uppercase mb-6 text-center border-b-2 border-[#231f20] pb-2">Global Development Status</h3>
-                    <div class="rounded-table-container overflow-x-auto">
+                <div class="w-full glass-card p-6 md:p-10 shadow-lg mb-8">
+                    <h3 class="text-2xl md:text-3xl font-roca-bold uppercase mb-6 text-center border-b-2 border-[#013C58] pb-2">Global Development Status</h3>
+                    <div class="overflow-x-auto rounded-xl">
                         <table>
                             <thead>
-                                <tr class="text-sm md:text-base">
+                                <tr>
                                     <th>Design</th>
                                     <th>Output (MWe)</th>
                                     <th>Type</th>
@@ -462,7 +540,7 @@
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-xs md:text-sm font-roca-bold">
+                            <tbody class="font-roca-bold">
                                 <tr><td>CA Waste Burner</td><td>100 MW(t)</td><td>MSR</td><td>Copenhagen Atomics</td><td>Denmark</td><td>Detailed design</td></tr>
                                 <tr><td>CMSR</td><td>110</td><td>MSR</td><td>Seaborg Technology</td><td>Denmark</td><td>Conceptual design</td></tr>
                                 <tr><td>FUJI</td><td>200</td><td>MSR</td><td>ITMSF</td><td>Japan</td><td>Conceptual design</td></tr>
