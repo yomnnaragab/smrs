@@ -19,22 +19,6 @@
             font-weight: 1000;
         }
 
-        /* Hexagon Sparkle Styling */
-        .sparkle-container {
-            position: fixed;
-            z-index: 1;
-            pointer-events: none;
-            width: 250px; 
-            height: 250px;
-        }
-
-        .bottom-left { bottom: 0px; left: 0px; }
-        .bottom-right {
-            bottom: 0px; 
-            right: 0px;  
-            transform: scaleX(-1);
-        }
-
         .title-sparkle {
             position: absolute;
             top: 50%;
@@ -90,7 +74,6 @@
             position: relative;
             z-index: 10; 
 
-            /* Force removal of all shadows/glows */
             box-shadow: none !important;
             filter: none !important;
             text-shadow: none !important;
@@ -135,18 +118,6 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-8">
-
-    <svg class="sparkle-container bottom-left" viewBox="0 0 120 120">
-        <polygon class="hex-glitter hex-gold-dark" points="30,60 45,68.5 45,85.5 30,94 15,85.5 15,68.5" />
-        <polygon class="hex-glitter hex-gold-mid" points="60,75 70,81 70,92 60,98 50,92 50,81" style="transform: translate(2px, -5px);"/>
-        <polygon class="hex-glitter hex-blue-mid" points="45,45 52,49 52,57 45,61 38,57 38,49" style="transform: translate(12px, 2px);"/>
-    </svg>
-
-    <svg class="sparkle-container bottom-right" viewBox="0 0 120 120">
-        <polygon class="hex-glitter hex-gold-dark" points="30,60 45,68.5 45,85.5 30,94 15,85.5 15,68.5" />
-        <polygon class="hex-glitter hex-gold-mid" points="60,75 70,81 70,92 60,98 50,92 50,81" style="transform: translate(2px, -5px);"/>
-        <polygon class="hex-glitter hex-blue-mid" points="45,45 52,49 52,57 45,61 38,57 38,49" style="transform: translate(12px, 2px);"/>
-    </svg>
 
     <div class="text-center mb-16">
         <div class="title-wrapper">
